@@ -522,8 +522,7 @@
     if(window.matchMedia('(prefers-reduced-motion:reduce)').matches){intro.remove();return;}
     setTimeout(function(){
       intro.classList.add('is-exiting');
-      intro.addEventListener('animationend',function(){intro.remove();},{once:true});
-      setTimeout(function(){if(intro.parentNode)intro.remove();},900);
+      setTimeout(function(){ if(intro.parentNode) intro.remove(); },750);
     },2400);
   })();
 </script>
