@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Summit Pressure Washing | Cedar City, UT</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='8' fill='%231d4ed8'/%3E%3Cpolygon points='8,40 24,12 40,40' fill='white'/%3E%3Cpolygon points='16,40 29,24 40,40' fill='%2393c5fd'/%3E%3C/svg%3E" />
+  <link rel="icon" href="assets/logo.jpg" type="image/jpeg" />
   <meta name="description" content="Cedar City's trusted pressure washing service. 5-star rated, open 24 hours. Call (435) 278-8851." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,9 +16,9 @@
     #intro{position:fixed;inset:0;z-index:9999;background:#0b1d2e;display:flex;align-items:center;justify-content:center;flex-direction:column;animation:introOut 0.6s ease 2.5s forwards}
     @keyframes introOut{to{opacity:0;visibility:hidden;pointer-events:none}}
     .intro-logo-wrap{position:relative;display:flex;align-items:center;justify-content:center}
-    .intro-logo{width:clamp(160px,32vw,240px);border-radius:20px;opacity:0;transform:scale(0.8);animation:logoIn .9s cubic-bezier(.16,1,.3,1) .3s forwards;filter:drop-shadow(0 0 40px rgba(56,189,248,.35))}
+    .intro-logo{width:clamp(140px,28vw,200px);border-radius:16px;opacity:0;transform:scale(0.8);animation:logoIn .9s cubic-bezier(.16,1,.3,1) .3s forwards}
     @keyframes logoIn{to{opacity:1;transform:scale(1)}}
-    .intro-glow{position:absolute;width:clamp(260px,56vw,420px);height:clamp(260px,56vw,420px);border-radius:50%;background:radial-gradient(circle,rgba(14,165,233,.2) 0%,transparent 70%);opacity:0;animation:glowPulse 1.5s ease-out .3s forwards;pointer-events:none}
+    .intro-glow{position:absolute;width:clamp(240px,50vw,380px);height:clamp(240px,50vw,380px);border-radius:50%;background:radial-gradient(circle,rgba(14,165,233,.25) 0%,transparent 70%);opacity:0;animation:glowPulse 1.5s ease-out .3s forwards;pointer-events:none}
     @keyframes glowPulse{0%{opacity:0;transform:scale(.6)}40%{opacity:1}100%{opacity:0;transform:scale(1.5)}}
     .intro-tagline{font-size:clamp(9px,1.8vw,12px);font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#38bdf8;opacity:0;transform:translateY(8px);animation:tagIn .6s cubic-bezier(.16,1,.3,1) 1.15s forwards;margin-top:20px}
     @keyframes tagIn{to{opacity:1;transform:translateY(0)}}
@@ -29,9 +29,9 @@
     body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);line-height:1.6;overflow-x:hidden}
     img{display:block;max-width:100%}
     a{text-decoration:none;color:inherit}
-    nav{position:sticky;top:0;z-index:999;background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:.65rem 5%;box-shadow:0 2px 16px rgba(0,0,0,.3);transition:padding .3s}
+    nav{position:sticky;top:0;z-index:999;background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:.65rem 5%;box-shadow:0 2px 16px rgba(0,0,0,.3)}
     .nav-logo{display:flex;align-items:center;gap:.65rem}
-    .nav-logo img{height:44px;width:44px;border-radius:10px;display:block;object-fit:cover}
+    .nav-logo img{height:44px;width:44px;border-radius:10px;object-fit:cover}
     .nav-logo-name{font-size:.88rem;font-weight:800;color:#fff;line-height:1.2}
     .nav-logo-sub{font-size:.68rem;color:rgba(255,255,255,.5);font-weight:500}
     .nav-links{display:flex;align-items:center;gap:1.3rem}
@@ -47,11 +47,11 @@
     .hero-slides{position:absolute;inset:0;z-index:0}
     .hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:heroSlide 25s infinite}
     .hero-slide::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,rgba(11,29,46,.88) 35%,rgba(11,29,46,.42) 100%)}
-    .hero-slide:nth-child(1){background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=2400&q=90');animation-delay:0s}
-    .hero-slide:nth-child(2){background-image:url('https://images.unsplash.com/photo-1527515637462-cff94aca208b?w=2400&q=90');animation-delay:5s}
-    .hero-slide:nth-child(3){background-image:url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=2400&q=90');animation-delay:10s}
-    .hero-slide:nth-child(4){background-image:url('https://images.unsplash.com/photo-1613323593608-abc90fec84ff?w=2400&q=90');animation-delay:15s}
-    .hero-slide:nth-child(5){background-image:url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=2400&q=90');animation-delay:20s}
+    .hero-slide:nth-child(1){background-image:url('assets/cover.jpg');animation-delay:0s}
+    .hero-slide:nth-child(2){background-image:url('assets/gm_1.jpg');animation-delay:5s}
+    .hero-slide:nth-child(3){background-image:url('assets/gm_2.jpg');animation-delay:10s}
+    .hero-slide:nth-child(4){background-image:url('assets/gm_3.jpg');animation-delay:15s}
+    .hero-slide:nth-child(5){background-image:url('assets/hero.jpg');animation-delay:20s}
     @keyframes heroSlide{0%{opacity:0}5%{opacity:1}20%{opacity:1}25%{opacity:0}100%{opacity:0}}
     .hero-inner{position:relative;z-index:2;padding:0 5%;max-width:720px}
     .hero-badge{display:inline-flex;align-items:center;gap:.45rem;background:rgba(14,165,233,.18);border:1px solid rgba(56,189,248,.3);color:var(--cyan);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.35rem .85rem;border-radius:999px;margin-bottom:1.1rem;backdrop-filter:blur(6px)}
@@ -61,7 +61,7 @@
     .hero-btns{display:flex;gap:.85rem;flex-wrap:wrap}
     .btn-primary{background:var(--blue);color:#fff;padding:.85rem 2rem;border-radius:var(--r);font-weight:700;font-size:.95rem;border:none;cursor:pointer;transition:background .2s,transform .15s,box-shadow .2s;box-shadow:0 4px 18px rgba(14,165,233,.4);display:inline-block}
     .btn-primary:hover{background:var(--blue2);transform:translateY(-2px);box-shadow:0 6px 24px rgba(14,165,233,.5)}
-    .btn-book-hero{background:#fff;color:var(--navy);padding:.85rem 2rem;border-radius:var(--r);font-weight:800;font-size:.95rem;cursor:pointer;transition:background .2s,transform .15s,box-shadow .2s;box-shadow:0 4px 18px rgba(0,0,0,.25);display:inline-block}
+    .btn-book-hero{background:#fff;color:var(--navy);padding:.85rem 2rem;border-radius:var(--r);font-weight:800;font-size:.95rem;cursor:pointer;transition:background .2s,transform .15s;box-shadow:0 4px 18px rgba(0,0,0,.25);display:inline-block}
     .btn-book-hero:hover{background:#e8f4fd;transform:translateY(-2px)}
     .btn-ghost{background:transparent;color:#fff;padding:.85rem 2rem;border-radius:var(--r);font-weight:700;font-size:.95rem;border:2px solid rgba(255,255,255,.45);cursor:pointer;transition:border-color .2s,background .2s;display:inline-block}
     .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.07)}
@@ -74,16 +74,6 @@
     .sec-tag{display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:.45rem}
     .sec-title{font-size:clamp(1.7rem,3.6vw,2.5rem);font-weight:900;color:var(--navy);line-height:1.18;margin-bottom:.65rem}
     .sec-sub{font-size:.95rem;color:var(--gray);max-width:500px;margin-bottom:2.5rem}
-    .services-section{background:var(--bone)}
-    .svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.2rem}
-    .svc-card{background:#fff;border-radius:var(--r);padding:1.5rem;box-shadow:var(--sh);display:flex;flex-direction:column;gap:.45rem;animation:fadeUp .55s cubic-bezier(.16,1,.3,1) both}
-    .svc-card:nth-child(1){animation-delay:.08s}.svc-card:nth-child(2){animation-delay:.16s}.svc-card:nth-child(3){animation-delay:.24s}.svc-card:nth-child(4){animation-delay:.32s}.svc-card:nth-child(5){animation-delay:.40s}.svc-card:nth-child(6){animation-delay:.48s}
-    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-    .svc-card:hover{transform:translateY(-4px);box-shadow:var(--sh2);transition:transform .22s,box-shadow .22s}
-    .svc-icon{font-size:1.8rem}
-    .svc-card h3{font-size:1rem;font-weight:800;color:var(--navy)}
-    .svc-card p{font-size:.83rem;color:var(--gray);line-height:1.55}
-    .svc-featured{border-top:3px solid var(--blue)}
     .ba-section{background:var(--navy);padding:4.5rem 5%}
     .ba-section .sec-tag{color:var(--cyan)}
     .ba-section .sec-title{color:#fff}
@@ -98,10 +88,24 @@
     .ba-after-img{position:absolute;top:0;left:0;width:100vw;max-width:none;height:100%;object-fit:cover;object-position:left top}
     .ba-divider{position:absolute;top:0;bottom:0;left:50%;transform:translateX(-50%);width:3px;background:#fff;z-index:3;pointer-events:none;box-shadow:0 0 10px rgba(0,0,0,.4)}
     .ba-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;background:#fff;border-radius:50%;box-shadow:0 2px 16px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:4}
-    .ba-btn svg{width:22px;height:22px}
     .ba-labels{position:absolute;inset:0;pointer-events:none;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;padding:.9rem}
     .ba-tag{background:rgba(11,29,46,.82);color:#fff;font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .75rem;border-radius:6px;backdrop-filter:blur(4px)}
     .ba-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:5;margin:0}
+    .services-section{background:var(--bone)}
+    .svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.2rem}
+    .svc-card{background:#fff;border-radius:var(--r);padding:1.5rem;box-shadow:var(--sh);display:flex;flex-direction:column;gap:.45rem;animation:fadeUp .55s cubic-bezier(.16,1,.3,1) both}
+    .svc-card:nth-child(1){animation-delay:.08s}.svc-card:nth-child(2){animation-delay:.16s}.svc-card:nth-child(3){animation-delay:.24s}.svc-card:nth-child(4){animation-delay:.32s}.svc-card:nth-child(5){animation-delay:.40s}.svc-card:nth-child(6){animation-delay:.48s}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+    .svc-card:hover{transform:translateY(-4px);box-shadow:var(--sh2);transition:transform .22s,box-shadow .22s}
+    .svc-icon{font-size:1.8rem}
+    .svc-card h3{font-size:1rem;font-weight:800;color:var(--navy)}
+    .svc-card p{font-size:.83rem;color:var(--gray);line-height:1.55}
+    .svc-featured{border-top:3px solid var(--blue)}
+    .review-banner{background:var(--navy);padding:3rem 5%;text-align:center}
+    .review-banner h2{font-size:clamp(1.4rem,2.8vw,2rem);font-weight:900;color:#fff;margin-bottom:.5rem}
+    .review-banner p{color:rgba(255,255,255,.65);font-size:.95rem;margin-bottom:1.6rem}
+    .btn-review{display:inline-flex;align-items:center;gap:.55rem;background:#f59e0b;color:#000;padding:.85rem 2rem;border-radius:var(--r);font-weight:800;font-size:.95rem;box-shadow:0 4px 18px rgba(245,158,11,.4);transition:transform .15s,box-shadow .2s}
+    .btn-review:hover{transform:translateY(-2px);box-shadow:0 6px 26px rgba(245,158,11,.5)}
     .gallery-section{background:var(--navy);padding:4.5rem 5%}
     .gallery-section .sec-tag{color:var(--cyan)}
     .gallery-section .sec-title{color:#fff;margin-bottom:2rem}
@@ -126,19 +130,8 @@
     .about-ic{width:40px;height:40px;background:rgba(14,165,233,.1);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
     .about-item h4{font-weight:800;color:var(--navy);margin-bottom:.15rem;font-size:.95rem}
     .about-item p{font-size:.84rem;color:var(--gray)}
-    .reviews-section{background:var(--bone)}
-    .google-badge{display:flex;align-items:center;justify-content:center;gap:.45rem;margin-bottom:2.2rem;font-size:.85rem;color:var(--gray)}
-    .google-badge .stars{color:var(--gold);font-size:1rem}
-    .reviews-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.2rem}
-    .review-card{background:#fff;border-radius:var(--r);padding:1.4rem;box-shadow:var(--sh);display:flex;flex-direction:column;gap:.8rem}
-    .review-stars{color:var(--gold);font-size:.95rem;letter-spacing:.08em}
-    .review-text{font-size:.88rem;color:var(--text);line-height:1.6;flex:1}
-    .review-author{display:flex;align-items:center;gap:.65rem;padding-top:.65rem;border-top:1px solid #e4edf5}
-    .review-av{width:38px;height:38px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:.88rem;flex-shrink:0}
-    .review-name{font-weight:700;font-size:.84rem;color:var(--navy)}
-    .review-date{font-size:.72rem;color:var(--gray)}
     .cta-section{background:var(--navy);padding:4.5rem 5%;text-align:center;position:relative;overflow:hidden}
-    .cta-section::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80') center/cover;opacity:.1}
+    .cta-section::before{content:'';position:absolute;inset:0;background:url('assets/cover_full.jpg') center/cover;opacity:.12}
     .cta-section .sec-tag{color:var(--cyan)}
     .cta-section .sec-title{color:#fff;margin:0 auto .65rem}
     .cta-section p{color:rgba(255,255,255,.6);margin:0 auto 2.2rem;font-size:1rem;max-width:440px}
@@ -164,25 +157,24 @@
   <div id="intro" aria-hidden="true">
     <div class="intro-logo-wrap">
       <div class="intro-glow"></div>
-      <img class="intro-logo" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=240&q=90" alt="" />
+      <img class="intro-logo" src="assets/logo-full.jpg" alt="Summit Pressure Washing" />
     </div>
     <p class="intro-tagline">Summit Pressure Washing</p>
   </div>
 
   <nav>
     <div class="nav-logo">
-      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=88&q=80" alt="Summit Logo" />
+      <img src="assets/logo.jpg" alt="Summit Logo" />
       <div>
         <div class="nav-logo-name">Summit Pressure Washing</div>
         <div class="nav-logo-sub">Cedar City, UT</div>
       </div>
     </div>
     <div class="nav-links" id="navLinks">
-      <a href="#services">Services</a>
       <a href="#before-after">Before & After</a>
+      <a href="#services">Services</a>
       <a href="#gallery">Gallery</a>
       <a href="#about">About</a>
-      <a href="#reviews">Reviews</a>
       <a href="tel:4352788851" class="nav-cta">📞 Call Now</a>
       <a href="https://squareup.com/appointments/book/summit-pressure-washing" target="_blank" rel="noopener" class="nav-book">📅 Book</a>
     </div>
@@ -206,7 +198,7 @@
       <div class="hero-btns">
         <a href="tel:4352788851" class="btn-primary">📞 (435) 278-8851</a>
         <a href="https://squareup.com/appointments/book/summit-pressure-washing" target="_blank" rel="noopener" class="btn-book-hero">📅 Book Online</a>
-        <a href="#services" class="btn-ghost">See Services ↓</a>
+        <a href="#before-after" class="btn-ghost">See Our Work ↓</a>
       </div>
     </div>
     <div class="scroll-hint" aria-hidden="true">
@@ -227,6 +219,52 @@
     <div class="trust-item">💯 Satisfaction Guaranteed</div>
   </div>
 
+  <!-- BEFORE & AFTER — above services -->
+  <section class="ba-section" id="before-after">
+    <span class="sec-tag">Proof of Work</span>
+    <h2 class="sec-title">Before &amp; After</h2>
+    <p class="sec-sub">Drag the slider to see the real results — these are our actual jobs.</p>
+    <div class="ba-pairs">
+      <div class="ba-wrap">
+        <span class="ba-lbl">Deck Cleaning</span>
+        <div class="ba-container" id="ba1">
+          <img class="ba-img" src="assets/before-deck.jpg" alt="Before — weathered deck" />
+          <div class="ba-after-wrap" id="ba1-after">
+            <img class="ba-after-img" src="assets/after-deck.jpg" alt="After — clean deck" />
+          </div>
+          <div class="ba-divider" id="ba1-div"></div>
+          <div class="ba-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5"><polyline points="8 4 2 12 8 20"/><polyline points="16 4 22 12 16 20"/></svg>
+          </div>
+          <div class="ba-labels">
+            <span class="ba-tag">Before</span>
+            <span class="ba-tag">After</span>
+          </div>
+          <input type="range" class="ba-range" id="ba1-range" min="0" max="100" value="50" aria-label="Comparison slider" />
+        </div>
+      </div>
+      <div class="ba-wrap">
+        <span class="ba-lbl">House Exterior Wash</span>
+        <div class="ba-container" id="ba2">
+          <img class="ba-img" src="assets/before-house.jpg" alt="Before — dirty house exterior" />
+          <div class="ba-after-wrap" id="ba2-after">
+            <img class="ba-after-img" src="assets/house-wash.jpg" alt="After — clean house exterior" />
+          </div>
+          <div class="ba-divider" id="ba2-div"></div>
+          <div class="ba-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5"><polyline points="8 4 2 12 8 20"/><polyline points="16 4 22 12 16 20"/></svg>
+          </div>
+          <div class="ba-labels">
+            <span class="ba-tag">Before</span>
+            <span class="ba-tag">After</span>
+          </div>
+          <input type="range" class="ba-range" id="ba2-range" min="0" max="100" value="50" aria-label="Comparison slider" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
   <section class="services-section" id="services">
     <span class="sec-tag">What We Do</span>
     <h2 class="sec-title">Pressure Washing Services</h2>
@@ -265,78 +303,49 @@
     </div>
   </section>
 
-  <section class="ba-section" id="before-after">
-    <span class="sec-tag">Proof of Work</span>
-    <h2 class="sec-title">Before &amp; After</h2>
-    <p class="sec-sub">Drag the slider to see the transformation.</p>
-    <div class="ba-pairs">
-      <div class="ba-wrap">
-        <span class="ba-lbl">Driveway Cleaning</span>
-        <div class="ba-container" id="ba1">
-          <img class="ba-img" src="https://images.unsplash.com/photo-1580256081112-e4c4d72e3b9e?w=1200&q=90" alt="Before — stained driveway" />
-          <div class="ba-after-wrap" id="ba1-after">
-            <img class="ba-after-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=90" alt="After — clean driveway" />
-          </div>
-          <div class="ba-divider" id="ba1-div"></div>
-          <div class="ba-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5"><polyline points="8 4 2 12 8 20"/><polyline points="16 4 22 12 16 20"/></svg>
-          </div>
-          <div class="ba-labels">
-            <span class="ba-tag">Before</span>
-            <span class="ba-tag">After</span>
-          </div>
-          <input type="range" class="ba-range" id="ba1-range" min="0" max="100" value="50" aria-label="Comparison slider" />
-        </div>
-      </div>
-      <div class="ba-wrap">
-        <span class="ba-lbl">House Exterior Wash</span>
-        <div class="ba-container" id="ba2">
-          <img class="ba-img" src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1200&q=90" alt="Before — dirty house exterior" />
-          <div class="ba-after-wrap" id="ba2-after">
-            <img class="ba-after-img" src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&q=90" alt="After — clean house exterior" />
-          </div>
-          <div class="ba-divider" id="ba2-div"></div>
-          <div class="ba-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5"><polyline points="8 4 2 12 8 20"/><polyline points="16 4 22 12 16 20"/></svg>
-          </div>
-          <div class="ba-labels">
-            <span class="ba-tag">Before</span>
-            <span class="ba-tag">After</span>
-          </div>
-          <input type="range" class="ba-range" id="ba2-range" min="0" max="100" value="50" aria-label="Comparison slider" />
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- REVIEW BANNER — under services -->
+  <div class="review-banner">
+    <h2>⭐ Like Our Service?</h2>
+    <p>Happy customers are our best advertisement. Leave us a quick Google review — it means the world!</p>
+    <a href="https://www.google.com/search?q=Summit+Pressure+Washing+Cedar+City+UT+reviews" target="_blank" rel="noopener" class="btn-review">
+      ⭐ Leave Us a Review on Google
+    </a>
+  </div>
 
+  <!-- GALLERY -->
   <section class="gallery-section" id="gallery">
     <span class="sec-tag">Our Work</span>
     <h2 class="sec-title">Photo Gallery</h2>
     <div class="gallery-grid">
-      <a href="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=2400&q=90" target="_blank"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=85" alt="Pressure washing results 1" loading="lazy" /></a>
-      <a href="https://images.unsplash.com/photo-1527515637462-cff94aca208b?w=2400&q=90" target="_blank"><img src="https://images.unsplash.com/photo-1527515637462-cff94aca208b?w=900&q=85" alt="Pressure washing results 2" loading="lazy" /></a>
-      <a href="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=2400&q=90" target="_blank"><img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=900&q=85" alt="Pressure washing results 3" loading="lazy" /></a>
-      <a href="https://images.unsplash.com/photo-1613323593608-abc90fec84ff?w=2400&q=90" target="_blank"><img src="https://images.unsplash.com/photo-1613323593608-abc90fec84ff?w=900&q=85" alt="Clean exterior" loading="lazy" /></a>
-      <a href="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=2400&q=90" target="_blank"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&q=85" alt="Kitchen cleaning" loading="lazy" /></a>
-      <a href="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=2400&q=90" target="_blank"><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&q=85" alt="Clean house" loading="lazy" /></a>
-      <a href="https://images.unsplash.com/photo-1580256081112-e4c4d72e3b9e?w=2400&q=90" target="_blank"><img src="https://images.unsplash.com/photo-1580256081112-e4c4d72e3b9e?w=900&q=85" alt="Driveway cleaning" loading="lazy" /></a>
-      <a href="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=2400&q=90" target="_blank"><img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=900&q=85" alt="House exterior" loading="lazy" /></a>
-      <a href="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=2400&q=90" target="_blank"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=900&q=85" alt="Cleaning service" loading="lazy" /></a>
+      <a href="assets/fb_1.jpg" target="_blank"><img src="assets/fb_1.jpg" alt="Pressure washing result" loading="lazy" /></a>
+      <a href="assets/fb_2.jpg" target="_blank"><img src="assets/fb_2.jpg" alt="Pressure washing result" loading="lazy" /></a>
+      <a href="assets/fb_3.jpg" target="_blank"><img src="assets/fb_3.jpg" alt="Pressure washing result" loading="lazy" /></a>
+      <a href="assets/fb_4.jpg" target="_blank"><img src="assets/fb_4.jpg" alt="Pressure washing result" loading="lazy" /></a>
+      <a href="assets/fb_5.jpg" target="_blank"><img src="assets/fb_5.jpg" alt="Pressure washing result" loading="lazy" /></a>
+      <a href="assets/fb_6.jpg" target="_blank"><img src="assets/fb_6.jpg" alt="Pressure washing result" loading="lazy" /></a>
+      <a href="assets/fb_7.jpg" target="_blank"><img src="assets/fb_7.jpg" alt="Pressure washing result" loading="lazy" /></a>
+      <a href="assets/fb_8.jpg" target="_blank"><img src="assets/fb_8.jpg" alt="Pressure washing result" loading="lazy" /></a>
+      <a href="assets/fb_9.jpg" target="_blank"><img src="assets/fb_9.jpg" alt="Pressure washing result" loading="lazy" /></a>
+      <a href="assets/fb_10.jpg" target="_blank"><img src="assets/fb_10.jpg" alt="Pressure washing result" loading="lazy" /></a>
+      <a href="assets/fb_11.jpg" target="_blank"><img src="assets/fb_11.jpg" alt="Pressure washing result" loading="lazy" /></a>
+      <a href="assets/fb_12.jpg" target="_blank"><img src="assets/fb_12.jpg" alt="Pressure washing result" loading="lazy" /></a>
+      <a href="assets/gm_1.jpg" target="_blank"><img src="assets/gm_1.jpg" alt="Pressure washing result" loading="lazy" /></a>
+      <a href="assets/gm_2.jpg" target="_blank"><img src="assets/gm_2.jpg" alt="Pressure washing result" loading="lazy" /></a>
+      <a href="assets/gm_3.jpg" target="_blank"><img src="assets/gm_3.jpg" alt="Pressure washing result" loading="lazy" /></a>
+      <a href="assets/gm_4.jpg" target="_blank"><img src="assets/gm_4.jpg" alt="Pressure washing result" loading="lazy" /></a>
     </div>
   </section>
 
   <div class="book-banner">
     <h2>Ready to Get Started?</h2>
     <p>Book your cleaning online in minutes — pick your date and we'll handle the rest.</p>
-    <a href="https://squareup.com/appointments/book/summit-pressure-washing" target="_blank" rel="noopener" class="btn-book-big">
-      📅 Book Your Appointment
-    </a>
+    <a href="https://squareup.com/appointments/book/summit-pressure-washing" target="_blank" rel="noopener" class="btn-book-big">📅 Book Your Appointment</a>
   </div>
 
   <section class="about-section" id="about">
     <div class="about-inner">
       <div class="about-photo">
-        <img src="https://images.unsplash.com/photo-1613323593608-abc90fec84ff?w=800&q=90" alt="Summit Pressure Washing team" loading="lazy" />
+        <img src="assets/cover_full.jpg" alt="Summit Pressure Washing team" loading="lazy" />
       </div>
       <div>
         <span class="sec-tag">About Us</span>
@@ -345,81 +354,22 @@
         <div class="about-items">
           <div class="about-item">
             <div class="about-ic">⭐</div>
-            <div>
-              <h4>5-Star Rated</h4>
-              <p>17 five-star Google reviews and counting. Our reputation is built job by job.</p>
-            </div>
+            <div><h4>5-Star Rated</h4><p>17 five-star Google reviews and counting. Our reputation is built job by job.</p></div>
           </div>
           <div class="about-item">
             <div class="about-ic">🕐</div>
-            <div>
-              <h4>Open 24 / 7</h4>
-              <p>We work around your schedule — evenings, weekends, and holidays.</p>
-            </div>
+            <div><h4>Open 24 / 7</h4><p>We work around your schedule — evenings, weekends, and holidays.</p></div>
           </div>
           <div class="about-item">
             <div class="about-ic">💧</div>
-            <div>
-              <h4>Eco-Friendly Products</h4>
-              <p>Biodegradable detergents that are safe for your plants, pets, and driveway.</p>
-            </div>
+            <div><h4>Eco-Friendly Products</h4><p>Biodegradable detergents safe for your plants, pets, and driveway.</p></div>
           </div>
           <div class="about-item">
             <div class="about-ic">🛡️</div>
-            <div>
-              <h4>Fully Insured</h4>
-              <p>Licensed and insured so you never have to worry about a thing.</p>
-            </div>
+            <div><h4>Fully Insured</h4><p>Licensed and insured so you never have to worry about a thing.</p></div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="reviews-section" id="reviews">
-    <span class="sec-tag">Customer Reviews</span>
-    <h2 class="sec-title">What Our Clients Say</h2>
-    <div class="google-badge">
-      <span class="stars">★★★★★</span>
-      <span><strong>5.0</strong> on Google &nbsp;·&nbsp; 17 reviews</span>
-    </div>
-    <div class="reviews-grid">
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Summit did an incredible job on my driveway. It looks brand new — I couldn't believe the difference. Will absolutely call them again."</p>
-        <div class="review-author">
-          <div class="review-av">T</div>
-          <div>
-            <div class="review-name">Tyler M.</div>
-            <div class="review-date">Cedar City, UT</div>
-          </div>
-        </div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Super professional and on time. My house siding looks amazing — all the green algae is completely gone. Highly recommend!"</p>
-        <div class="review-author">
-          <div class="review-av">S</div>
-          <div>
-            <div class="review-name">Sarah K.</div>
-            <div class="review-date">Cedar City, UT</div>
-          </div>
-        </div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Best pressure washing in Cedar City, no question. Fair price, fast work, great communication. 10/10."</p>
-        <div class="review-author">
-          <div class="review-av">R</div>
-          <div>
-            <div class="review-name">Randy B.</div>
-            <div class="review-date">Cedar City, UT</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:2rem">
-      <a href="https://www.google.com/search?q=Summit+Pressure+Washing+Cedar+City+UT+reviews" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.55rem;background:#fff;color:#0b1d2e;padding:.72rem 1.6rem;border-radius:8px;font-weight:700;font-size:.88rem;box-shadow:0 2px 14px rgba(0,0,0,.1);transition:box-shadow .2s">⭐ Leave Us a Review on Google</a>
     </div>
   </section>
 
@@ -439,7 +389,7 @@
     <div class="footer-top">
       <div>
         <div class="footer-logo">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=88&q=80" alt="Summit" />
+          <img src="assets/logo.jpg" alt="Summit" />
           <div class="footer-logo-name">Summit Pressure Washing</div>
         </div>
         <p class="footer-desc">Cedar City's trusted pressure washing service. 5-star rated, open 24/7, satisfaction guaranteed.</p>
@@ -459,7 +409,8 @@
         <ul>
           <li><a href="tel:4352788851">📞 (435) 278-8851</a></li>
           <li><a href="https://squareup.com/appointments/book/summit-pressure-washing" target="_blank">📅 Book Online</a></li>
-          <li><a href="#reviews">⭐ Reviews</a></li>
+          <li><a href="#before-after">Before & After</a></li>
+          <li><a href="#gallery">Gallery</a></li>
           <li><a href="#about">About Us</a></li>
         </ul>
       </div>
