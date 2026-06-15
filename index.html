@@ -491,7 +491,8 @@
   // Before/After Slider
   (function(){
     const range = document.getElementById('ba1-range');
-    if (!range) return;;
+    const container = document.getElementById('ba1');
+    if (!range || !container) return;
     const after = document.getElementById('ba1-after');
     const div   = document.getElementById('ba1-div');
     const container = document.getElementById('ba1');
