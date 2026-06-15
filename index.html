@@ -4,8 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Summit Pressure Washing | Cedar City, UT</title>
-  <link rel="icon" type="image/jpeg" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='8' fill='%231d4ed8'/%3E%3Cpolygon points='8,40 24,12 40,40' fill='white'/%3E%3Cpolygon points='16,40 29,24 40,40' fill='%2393c5fd'/%3E%3C/svg%3E" />
-  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='8' fill='%231d4ed8'/%3E%3Cpolygon points='8,40 24,12 40,40' fill='white'/%3E%3Cpolygon points='16,40 29,24 40,40' fill='%2393c5fd'/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='8' fill='%231d4ed8'/%3E%3Cpolygon points='8,40 24,12 40,40' fill='white'/%3E%3Cpolygon points='16,40 29,24 40,40' fill='%2393c5fd'/%3E%3C/svg%3E" />
   <meta name="description" content="Cedar City's trusted pressure washing service. 5-star rated, open 24 hours. Call (435) 278-8851." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,111 +13,95 @@
   {"@context":"https://schema.org","@type":"LocalBusiness","name":"Summit Pressure Washing","telephone":"(435) 278-8851","address":{"@type":"PostalAddress","addressLocality":"Cedar City","addressRegion":"UT","addressCountry":"US"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"17"},"openingHours":"Mo-Su 00:00-24:00"}
   </script>
   <style>
-    /* ── Intro ── */
     #intro{position:fixed;inset:0;z-index:9999;background:#0b1d2e;display:flex;align-items:center;justify-content:center;flex-direction:column;animation:introOut 0.6s ease 2.5s forwards}
     @keyframes introOut{to{opacity:0;visibility:hidden;pointer-events:none}}
     .intro-logo-wrap{position:relative;display:flex;align-items:center;justify-content:center}
-    .intro-logo{width:clamp(180px,38vw,280px);border-radius:20px;opacity:0;transform:scale(0.8);animation:logoIn .9s cubic-bezier(.16,1,.3,1) .3s forwards;filter:drop-shadow(0 0 40px rgba(56,189,248,.35))}
+    .intro-logo{width:clamp(160px,32vw,240px);border-radius:20px;opacity:0;transform:scale(0.8);animation:logoIn .9s cubic-bezier(.16,1,.3,1) .3s forwards;filter:drop-shadow(0 0 40px rgba(56,189,248,.35))}
     @keyframes logoIn{to{opacity:1;transform:scale(1)}}
     .intro-glow{position:absolute;width:clamp(260px,56vw,420px);height:clamp(260px,56vw,420px);border-radius:50%;background:radial-gradient(circle,rgba(14,165,233,.2) 0%,transparent 70%);opacity:0;animation:glowPulse 1.5s ease-out .3s forwards;pointer-events:none}
     @keyframes glowPulse{0%{opacity:0;transform:scale(.6)}40%{opacity:1}100%{opacity:0;transform:scale(1.5)}}
     .intro-tagline{font-size:clamp(9px,1.8vw,12px);font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#38bdf8;opacity:0;transform:translateY(8px);animation:tagIn .6s cubic-bezier(.16,1,.3,1) 1.15s forwards;margin-top:20px}
     @keyframes tagIn{to{opacity:1;transform:translateY(0)}}
     @media(prefers-reduced-motion:reduce){#intro{display:none!important}}
-
-    /* ── Base ── */
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{
-      --navy:#0b1d2e;
-      --navy2:#0f2540;
-      --blue:#0ea5e9;
-      --blue2:#0284c7;
-      --cyan:#38bdf8;
-      --white:#fff;
-      --bone:#f0f6fc;
-      --gray:#64748b;
-      --text:#1e293b;
-      --gold:#f59e0b;
-      --r:10px;
-      --sh:0 2px 16px rgba(0,0,0,.1);
-      --sh2:0 6px 32px rgba(0,0,0,.18);
-    }
+    :root{--navy:#0b1d2e;--navy2:#0f2540;--blue:#0ea5e9;--blue2:#0284c7;--cyan:#38bdf8;--white:#fff;--bone:#f0f6fc;--gray:#64748b;--text:#1e293b;--gold:#f59e0b;--r:10px;--sh:0 2px 16px rgba(0,0,0,.1);--sh2:0 6px 32px rgba(0,0,0,.18);}
     html{scroll-behavior:smooth}
     body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);line-height:1.6;overflow-x:hidden}
     img{display:block;max-width:100%}
     a{text-decoration:none;color:inherit}
-
-    /* ── Nav ── */
     nav{position:sticky;top:0;z-index:999;background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:.65rem 5%;box-shadow:0 2px 16px rgba(0,0,0,.3);transition:padding .3s}
     .nav-logo{display:flex;align-items:center;gap:.65rem}
     .nav-logo img{height:44px;width:44px;border-radius:10px;display:block;object-fit:cover}
     .nav-logo-name{font-size:.88rem;font-weight:800;color:#fff;line-height:1.2}
     .nav-logo-sub{font-size:.68rem;color:rgba(255,255,255,.5);font-weight:500}
-    .nav-links{display:flex;align-items:center;gap:1.6rem}
-    .nav-links a{color:rgba(255,255,255,.75);font-size:.88rem;font-weight:500;transition:color .2s}
+    .nav-links{display:flex;align-items:center;gap:1.3rem}
+    .nav-links a{color:rgba(255,255,255,.75);font-size:.83rem;font-weight:500;transition:color .2s}
     .nav-links a:hover{color:#fff}
-    .nav-cta{background:var(--blue)!important;color:#fff!important;padding:.45rem 1.1rem;border-radius:8px;font-weight:700!important;transition:background .2s,transform .15s!important}
-    .nav-cta:hover{background:var(--blue2)!important;transform:translateY(-1px)}
+    .nav-cta{background:var(--blue)!important;color:#fff!important;padding:.42rem 1rem;border-radius:8px;font-weight:700!important;transition:background .2s!important}
+    .nav-cta:hover{background:var(--blue2)!important}
+    .nav-book{background:rgba(255,255,255,.12)!important;color:#fff!important;padding:.42rem 1rem;border-radius:8px;font-weight:700!important;border:1px solid rgba(255,255,255,.25)!important;transition:background .2s!important}
+    .nav-book:hover{background:rgba(255,255,255,.22)!important}
     .hamburger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:4px}
     .hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:.3s}
-
-    /* ── Hero ── */
-    .hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden}
-    .hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1527515637462-cff94aca208b?w=1200&q=80') center/cover no-repeat;transform:scale(1.04);transition:transform 8s ease}
-    .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,rgba(11,29,46,.92) 40%,rgba(11,29,46,.5) 100%)}
-    .hero:hover .hero-bg{transform:scale(1)}
-    .hero-inner{position:relative;z-index:2;padding:0 5%;max-width:680px}
+    .hero{position:relative;min-height:94vh;display:flex;align-items:center;overflow:hidden}
+    .hero-slides{position:absolute;inset:0;z-index:0}
+    .hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:heroSlide 25s infinite}
+    .hero-slide::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,rgba(11,29,46,.88) 35%,rgba(11,29,46,.42) 100%)}
+    .hero-slide:nth-child(1){background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=2400&q=90');animation-delay:0s}
+    .hero-slide:nth-child(2){background-image:url('https://images.unsplash.com/photo-1527515637462-cff94aca208b?w=2400&q=90');animation-delay:5s}
+    .hero-slide:nth-child(3){background-image:url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=2400&q=90');animation-delay:10s}
+    .hero-slide:nth-child(4){background-image:url('https://images.unsplash.com/photo-1613323593608-abc90fec84ff?w=2400&q=90');animation-delay:15s}
+    .hero-slide:nth-child(5){background-image:url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=2400&q=90');animation-delay:20s}
+    @keyframes heroSlide{0%{opacity:0}5%{opacity:1}20%{opacity:1}25%{opacity:0}100%{opacity:0}}
+    .hero-inner{position:relative;z-index:2;padding:0 5%;max-width:720px}
     .hero-badge{display:inline-flex;align-items:center;gap:.45rem;background:rgba(14,165,233,.18);border:1px solid rgba(56,189,248,.3);color:var(--cyan);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.35rem .85rem;border-radius:999px;margin-bottom:1.1rem;backdrop-filter:blur(6px)}
-    .hero h1{font-size:clamp(2.4rem,5.5vw,3.8rem);color:#fff;font-weight:900;line-height:1.08;margin-bottom:.9rem}
+    .hero h1{font-size:clamp(2.6rem,5.8vw,4.2rem);color:#fff;font-weight:900;line-height:1.06;margin-bottom:.9rem}
     .hero h1 em{color:var(--cyan);font-style:normal}
-    .hero p{font-size:1.02rem;color:rgba(255,255,255,.78);max-width:460px;margin-bottom:1.8rem}
+    .hero p{font-size:1.05rem;color:rgba(255,255,255,.8);max-width:480px;margin-bottom:2rem}
     .hero-btns{display:flex;gap:.85rem;flex-wrap:wrap}
-    .btn-primary{background:var(--blue);color:#fff;padding:.82rem 2rem;border-radius:var(--r);font-weight:700;font-size:.95rem;border:none;cursor:pointer;transition:background .2s,transform .15s,box-shadow .2s;box-shadow:0 4px 18px rgba(14,165,233,.4);display:inline-block}
+    .btn-primary{background:var(--blue);color:#fff;padding:.85rem 2rem;border-radius:var(--r);font-weight:700;font-size:.95rem;border:none;cursor:pointer;transition:background .2s,transform .15s,box-shadow .2s;box-shadow:0 4px 18px rgba(14,165,233,.4);display:inline-block}
     .btn-primary:hover{background:var(--blue2);transform:translateY(-2px);box-shadow:0 6px 24px rgba(14,165,233,.5)}
-    .btn-ghost{background:transparent;color:#fff;padding:.82rem 2rem;border-radius:var(--r);font-weight:700;font-size:.95rem;border:2px solid rgba(255,255,255,.45);cursor:pointer;transition:border-color .2s,background .2s;display:inline-block}
+    .btn-book-hero{background:#fff;color:var(--navy);padding:.85rem 2rem;border-radius:var(--r);font-weight:800;font-size:.95rem;cursor:pointer;transition:background .2s,transform .15s,box-shadow .2s;box-shadow:0 4px 18px rgba(0,0,0,.25);display:inline-block}
+    .btn-book-hero:hover{background:#e8f4fd;transform:translateY(-2px)}
+    .btn-ghost{background:transparent;color:#fff;padding:.85rem 2rem;border-radius:var(--r);font-weight:700;font-size:.95rem;border:2px solid rgba(255,255,255,.45);cursor:pointer;transition:border-color .2s,background .2s;display:inline-block}
     .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.07)}
     .scroll-hint{position:absolute;bottom:1.6rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:.35rem;color:rgba(255,255,255,.35);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;animation:bob 2s infinite}
     @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
-
-    /* ── Trust Strip ── */
     .trust{background:var(--navy2);padding:.85rem 5%;display:flex;align-items:center;justify-content:center;gap:1.8rem;flex-wrap:wrap}
     .trust-item{display:flex;align-items:center;gap:.4rem;color:rgba(255,255,255,.8);font-size:.8rem;font-weight:600}
     .trust-sep{width:1px;height:16px;background:rgba(255,255,255,.14)}
-
-    /* ── Section helpers ── */
     section{padding:4.5rem 5%}
     .sec-tag{display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:.45rem}
     .sec-title{font-size:clamp(1.7rem,3.6vw,2.5rem);font-weight:900;color:var(--navy);line-height:1.18;margin-bottom:.65rem}
     .sec-sub{font-size:.95rem;color:var(--gray);max-width:500px;margin-bottom:2.5rem}
-
-    /* ── Before / After Slider ── */
-    .ba-section{background:var(--navy);padding:4.5rem 5%}
-    .ba-section .sec-tag{color:var(--cyan)}
-    .ba-section .sec-title{color:#fff}
-    .ba-section .sec-sub{color:rgba(255,255,255,.6)}
-    .ba-container{position:relative;width:100%;max-width:700px;margin:0 auto;aspect-ratio:9/16;border-radius:16px;overflow:hidden;box-shadow:var(--sh2);cursor:ew-resize;user-select:none}
-    @media(min-width:600px){.ba-container{aspect-ratio:3/2}}
-    .ba-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-    .ba-after-img{clip-path:inset(0 50% 0 0)}
-    .ba-divider{position:absolute;top:0;bottom:0;left:50%;transform:translateX(-50%);width:3px;background:#fff;z-index:3;pointer-events:none}
-    .ba-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;background:#fff;border-radius:50%;box-shadow:0 2px 14px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;pointer-events:none}
-    .ba-btn svg{width:22px;height:22px}
-    .ba-labels{position:absolute;inset:0;pointer-events:none;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;padding:1rem}
-    .ba-label{background:rgba(11,29,46,.78);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .75rem;border-radius:6px;backdrop-filter:blur(4px)}
-    .ba-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:4;margin:0}
-    .ba-hint{text-align:center;color:rgba(255,255,255,.4);font-size:.78rem;margin-top:1rem;font-style:italic}
-
-    /* ── Services ── */
     .services-section{background:var(--bone)}
     .svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.2rem}
-    .svc-card{background:#fff;border-radius:var(--r);padding:1.5rem;box-shadow:var(--sh);transition:transform .22s,box-shadow .22s;display:flex;flex-direction:column;gap:.45rem}
-    .svc-card:hover{transform:translateY(-4px);box-shadow:var(--sh2)}
+    .svc-card{background:#fff;border-radius:var(--r);padding:1.5rem;box-shadow:var(--sh);display:flex;flex-direction:column;gap:.45rem;animation:fadeUp .55s cubic-bezier(.16,1,.3,1) both}
+    .svc-card:nth-child(1){animation-delay:.08s}.svc-card:nth-child(2){animation-delay:.16s}.svc-card:nth-child(3){animation-delay:.24s}.svc-card:nth-child(4){animation-delay:.32s}.svc-card:nth-child(5){animation-delay:.40s}.svc-card:nth-child(6){animation-delay:.48s}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+    .svc-card:hover{transform:translateY(-4px);box-shadow:var(--sh2);transition:transform .22s,box-shadow .22s}
     .svc-icon{font-size:1.8rem}
     .svc-card h3{font-size:1rem;font-weight:800;color:var(--navy)}
     .svc-card p{font-size:.83rem;color:var(--gray);line-height:1.55}
     .svc-featured{border-top:3px solid var(--blue)}
-
-    /* ── Gallery ── */
+    .ba-section{background:var(--navy);padding:4.5rem 5%}
+    .ba-section .sec-tag{color:var(--cyan)}
+    .ba-section .sec-title{color:#fff}
+    .ba-section .sec-sub{color:rgba(255,255,255,.6)}
+    .ba-pairs{display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:1000px;margin:0 auto}
+    @media(max-width:700px){.ba-pairs{grid-template-columns:1fr}}
+    .ba-wrap{display:flex;flex-direction:column;gap:.6rem}
+    .ba-lbl{font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:.3rem;display:block}
+    .ba-container{position:relative;width:100%;aspect-ratio:4/3;border-radius:14px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,.45);cursor:ew-resize;user-select:none}
+    .ba-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .ba-after-wrap{position:absolute;top:0;left:0;bottom:0;overflow:hidden;width:50%}
+    .ba-after-img{position:absolute;top:0;left:0;width:100vw;max-width:none;height:100%;object-fit:cover;object-position:left top}
+    .ba-divider{position:absolute;top:0;bottom:0;left:50%;transform:translateX(-50%);width:3px;background:#fff;z-index:3;pointer-events:none;box-shadow:0 0 10px rgba(0,0,0,.4)}
+    .ba-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;background:#fff;border-radius:50%;box-shadow:0 2px 16px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:4}
+    .ba-btn svg{width:22px;height:22px}
+    .ba-labels{position:absolute;inset:0;pointer-events:none;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;padding:.9rem}
+    .ba-tag{background:rgba(11,29,46,.82);color:#fff;font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .75rem;border-radius:6px;backdrop-filter:blur(4px)}
+    .ba-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:5;margin:0}
     .gallery-section{background:var(--navy);padding:4.5rem 5%}
     .gallery-section .sec-tag{color:var(--cyan)}
     .gallery-section .sec-title{color:#fff;margin-bottom:2rem}
@@ -129,8 +112,11 @@
     .gallery-grid a:hover img{transform:scale(1.04)}
     .gallery-grid a::after{content:'';position:absolute;inset:0;background:rgba(11,29,46,0);transition:background .3s}
     .gallery-grid a:hover::after{background:rgba(11,29,46,.22)}
-
-    /* ── About ── */
+    .book-banner{background:linear-gradient(135deg,#0ea5e9 0%,#0284c7 100%);padding:3.2rem 5%;text-align:center}
+    .book-banner h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:900;color:#fff;margin-bottom:.5rem}
+    .book-banner p{color:rgba(255,255,255,.85);font-size:1rem;margin-bottom:1.8rem}
+    .btn-book-big{display:inline-flex;align-items:center;gap:.6rem;background:#fff;color:#0284c7;padding:1rem 2.4rem;border-radius:var(--r);font-weight:900;font-size:1.05rem;box-shadow:0 6px 28px rgba(0,0,0,.2);transition:transform .15s,box-shadow .2s}
+    .btn-book-big:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(0,0,0,.3)}
     .about-section{background:#fff}
     .about-inner{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;max-width:1000px;margin:0 auto}
     .about-photo{border-radius:14px;overflow:hidden;box-shadow:var(--sh2)}
@@ -140,8 +126,6 @@
     .about-ic{width:40px;height:40px;background:rgba(14,165,233,.1);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
     .about-item h4{font-weight:800;color:var(--navy);margin-bottom:.15rem;font-size:.95rem}
     .about-item p{font-size:.84rem;color:var(--gray)}
-
-    /* ── Reviews ── */
     .reviews-section{background:var(--bone)}
     .google-badge{display:flex;align-items:center;justify-content:center;gap:.45rem;margin-bottom:2.2rem;font-size:.85rem;color:var(--gray)}
     .google-badge .stars{color:var(--gold);font-size:1rem}
@@ -153,17 +137,13 @@
     .review-av{width:38px;height:38px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:.88rem;flex-shrink:0}
     .review-name{font-weight:700;font-size:.84rem;color:var(--navy)}
     .review-date{font-size:.72rem;color:var(--gray)}
-
-    /* ── CTA ── */
     .cta-section{background:var(--navy);padding:4.5rem 5%;text-align:center;position:relative;overflow:hidden}
-    .cta-section::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80') center/cover;opacity:.12}
+    .cta-section::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80') center/cover;opacity:.1}
     .cta-section .sec-tag{color:var(--cyan)}
     .cta-section .sec-title{color:#fff;margin:0 auto .65rem}
     .cta-section p{color:rgba(255,255,255,.6);margin:0 auto 2.2rem;font-size:1rem;max-width:440px}
     .cta-phone{display:inline-flex;align-items:center;gap:.55rem;background:#fff;color:var(--navy);padding:.9rem 2rem;border-radius:var(--r);font-weight:800;font-size:1.1rem;box-shadow:0 4px 18px rgba(0,0,0,.18);transition:transform .15s,box-shadow .2s}
     .cta-phone:hover{transform:translateY(-2px);box-shadow:0 6px 26px rgba(0,0,0,.28)}
-
-    /* ── Footer ── */
     footer{background:#060e1c;color:rgba(255,255,255,.5);padding:2.5rem 5% 1.8rem}
     .footer-top{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;padding-bottom:1.8rem;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:1.3rem}
     .footer-logo{display:flex;align-items:center;gap:.75rem;margin-bottom:.6rem}
@@ -176,351 +156,339 @@
     .footer-col ul li a:hover{color:#fff}
     .footer-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.65rem;font-size:.75rem}
     .footer-bot a{color:var(--blue)}
-
-    /* ── Reveal ── */
-    .reveal{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
-    .reveal.visible{opacity:1;transform:none}
-
-    /* ── Responsive ── */
-    @media(max-width:800px){
-      .about-inner{grid-template-columns:1fr}
-      .about-photo img{aspect-ratio:16/9}
-    }
-    @media(max-width:620px){
-      .nav-links{display:none}
-      .hamburger{display:flex}
-      .nav-links.open{display:flex;flex-direction:column;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--navy);z-index:998;justify-content:center;align-items:center;font-size:1.2rem;gap:2rem}
-      .trust-sep{display:none}
-      .hero-btns{flex-direction:column;align-items:flex-start}
-      .nav-logo-sub{display:none}
-    }
+    @media(max-width:800px){.about-inner{grid-template-columns:1fr}.about-photo img{aspect-ratio:16/9}}
+    @media(max-width:620px){.nav-links{display:none}.hamburger{display:flex}.nav-links.open{display:flex;flex-direction:column;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--navy);z-index:998;justify-content:center;align-items:center;font-size:1.2rem;gap:2rem}.trust-sep{display:none}.hero-btns{flex-direction:column;align-items:flex-start}.nav-logo-sub{display:none}}
   </style>
 </head>
 <body>
-
-<!-- ── Intro ── -->
-<div id="intro" aria-hidden="true" role="presentation">
-  <div class="intro-logo-wrap">
-    <div class="intro-glow"></div>
-    <img class="intro-logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='8' fill='%231d4ed8'/%3E%3Cpolygon points='8,40 24,12 40,40' fill='white'/%3E%3Cpolygon points='16,40 29,24 40,40' fill='%2393c5fd'/%3E%3C/svg%3E" alt="Summit Pressure Washing" width="280" height="280" />
+  <div id="intro" aria-hidden="true">
+    <div class="intro-logo-wrap">
+      <div class="intro-glow"></div>
+      <img class="intro-logo" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=240&q=90" alt="" />
+    </div>
+    <p class="intro-tagline">Summit Pressure Washing</p>
   </div>
-  <div class="intro-tagline">Cedar City, Utah</div>
-</div>
 
-<!-- ── Nav ── -->
-<nav id="nav">
-  <a href="#top" class="nav-logo">
-    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='8' fill='%231d4ed8'/%3E%3Cpolygon points='8,40 24,12 40,40' fill='white'/%3E%3Cpolygon points='16,40 29,24 40,40' fill='%2393c5fd'/%3E%3C/svg%3E" alt="Summit Pressure Washing" />
-    <div>
-      <div class="nav-logo-name">Summit Pressure Washing</div>
-      <div class="nav-logo-sub">Cedar City, UT</div>
+  <nav>
+    <div class="nav-logo">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=88&q=80" alt="Summit Logo" />
+      <div>
+        <div class="nav-logo-name">Summit Pressure Washing</div>
+        <div class="nav-logo-sub">Cedar City, UT</div>
+      </div>
     </div>
-  </a>
-  <div class="nav-links" id="nav-links">
-    <a href="#services">Services</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#about">About</a>
-    <a href="#reviews">Reviews</a>
-    <a href="tel:+14352788851" class="nav-cta">📞 Call Now</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#before-after">Before & After</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="tel:4352788851" class="nav-cta">📞 Call Now</a>
+      <a href="https://squareup.com/appointments/book/summit-pressure-washing" target="_blank" rel="noopener" class="nav-book">📅 Book</a>
+    </div>
+    <button class="hamburger" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <section class="hero" id="top">
+    <div class="hero-slides" aria-hidden="true">
+      <div class="hero-slide"></div>
+      <div class="hero-slide"></div>
+      <div class="hero-slide"></div>
+      <div class="hero-slide"></div>
+      <div class="hero-slide"></div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-badge">⭐ 5.0 Stars &nbsp;·&nbsp; Cedar City's #1 Pressure Washing</div>
+      <h1>Make It <em>Spotless</em><br/>Again.</h1>
+      <p>Professional pressure washing for driveways, roofs, decks, and commercial properties. Fast. Affordable. Guaranteed results.</p>
+      <div class="hero-btns">
+        <a href="tel:4352788851" class="btn-primary">📞 (435) 278-8851</a>
+        <a href="https://squareup.com/appointments/book/summit-pressure-washing" target="_blank" rel="noopener" class="btn-book-hero">📅 Book Online</a>
+        <a href="#services" class="btn-ghost">See Services ↓</a>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      scroll
+    </div>
+  </section>
+
+  <div class="trust">
+    <div class="trust-item">⭐ 5.0 Google Rating</div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">🏔️ Cedar City Local</div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">⚡ Same-Day Service</div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">🕐 Open 24/7</div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">💯 Satisfaction Guaranteed</div>
   </div>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
 
-<!-- ── Hero ── -->
-<section class="hero" id="top">
-  <div class="hero-bg"></div>
-  <div class="hero-inner">
-    <div class="hero-badge">⭐ 5.0 Google Rating &nbsp;|&nbsp; Cedar City, UT</div>
-    <h1>Summit<br /><em>Pressure Washing</em></h1>
-    <p>Cedar City's go-to pressure washing crew. Professional, reliable, and available 24 hours a day.</p>
-    <div class="hero-btns">
-      <a href="tel:+14352788851" class="btn-primary">📞 Call Us Now</a>
-      <a href="#gallery" class="btn-ghost">See Our Work</a>
+  <section class="services-section" id="services">
+    <span class="sec-tag">What We Do</span>
+    <h2 class="sec-title">Pressure Washing Services</h2>
+    <p class="sec-sub">From residential driveways to commercial storefronts — we handle it all.</p>
+    <div class="svc-grid">
+      <div class="svc-card svc-featured">
+        <div class="svc-icon">🏠</div>
+        <h3>House Washing</h3>
+        <p>Full exterior soft wash that removes algae, mold, and grime without damaging siding or paint.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🛣️</div>
+        <h3>Driveway & Concrete</h3>
+        <p>High-pressure concrete cleaning that blasts away oil stains, tire marks, and embedded dirt.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🏗️</div>
+        <h3>Roof Cleaning</h3>
+        <p>Low-pressure soft wash removes black streaks and extends roof life without risk of damage.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🌿</div>
+        <h3>Deck & Patio</h3>
+        <p>Restore wood and composite decks to like-new condition — ready for staining or just to enjoy.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🏢</div>
+        <h3>Commercial</h3>
+        <p>Storefronts, parking lots, sidewalks — we keep your business looking professional year-round.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🚗</div>
+        <h3>Fleet Washing</h3>
+        <p>Regular wash programs for company vehicles and equipment. Custom scheduling available.</p>
+      </div>
     </div>
-  </div>
-  <div class="scroll-hint">
-    <span>Scroll</span>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><polyline points="6 9 12 15 18 9"/></svg>
-  </div>
-</section>
+  </section>
 
-<!-- ── Trust Strip ── -->
-<div class="trust">
-  <div class="trust-item">⭐ 5.0 Google Rating</div>
-  <div class="trust-sep"></div>
-  <div class="trust-item">📍 Cedar City, UT</div>
-  <div class="trust-sep"></div>
-  <div class="trust-item">🕐 Open 24 Hours</div>
-  <div class="trust-sep"></div>
-  <div class="trust-item">✅ Satisfaction Guaranteed</div>
-</div>
-
-<!-- ── Services ── -->
-<section class="services-section" id="services">
-  <div class="sec-tag">What We Do</div>
-  <h2 class="sec-title">Our Services</h2>
-  <p class="sec-sub">From driveways to rooftops — we handle it all with professional-grade equipment and care.</p>
-  <div class="svc-grid">
-    <div class="svc-card svc-featured reveal">
-      <div class="svc-icon">💧</div>
-      <h3>Pressure Washing</h3>
-      <p>Driveways, sidewalks, patios, and building exteriors blasted clean. Years of grime gone in one visit.</p>
-    </div>
-    <div class="svc-card reveal" style="transition-delay:.06s">
-      <div class="svc-icon">🌿</div>
-      <h3>Soft Washing</h3>
-      <p>Low-pressure cleaning for roofs, siding, and stucco. Removes mold and mildew without damage.</p>
-    </div>
-    <div class="svc-card reveal" style="transition-delay:.12s">
-      <div class="svc-icon">🏠</div>
-      <h3>House Washing</h3>
-      <p>Full exterior house cleaning to restore curb appeal and protect your home's surface from buildup.</p>
-    </div>
-    <div class="svc-card reveal" style="transition-delay:.18s">
-      <div class="svc-icon">🚗</div>
-      <h3>Driveway &amp; Concrete</h3>
-      <p>Oil stains, tire marks, dirt — our surface cleaning leaves your concrete looking brand new.</p>
-    </div>
-    <div class="svc-card reveal" style="transition-delay:.24s">
-      <div class="svc-icon">🪵</div>
-      <h3>Deck &amp; Fence Cleaning</h3>
-      <p>Restore weathered decks and fences. We prep surfaces right for staining, sealing, or painting.</p>
-    </div>
-    <div class="svc-card reveal" style="transition-delay:.3s">
-      <div class="svc-icon">🏢</div>
-      <h3>Commercial Cleaning</h3>
-      <p>Storefronts, parking lots, and commercial properties kept clean and professional year-round.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ── Rate Us ── -->
-<section style="background:#fff;padding:4rem 5%;text-align:center">
-  <div class="sec-tag">Google Reviews</div>
-  <h2 class="sec-title" style="margin:0 auto .6rem">Did You Like Our Service?</h2>
-  <p style="color:var(--gray);font-size:1rem;max-width:440px;margin:0 auto 1.8rem">Your review helps us grow and helps other Cedar City homeowners find us. Takes less than a minute!</p>
-  <div style="color:var(--gold);font-size:2rem;letter-spacing:.1em;margin-bottom:1.4rem">⭐⭐⭐⭐⭐</div>
-  <a href="https://www.google.com/maps/place/Summit+Pressure+Washing/@37.6541285,-113.101083,17z/data=!4m6!3m5!1s0x4f02f1fede83e6d7:0x27052ff9e8cc4660!8m2!3d37.6541285!4d-113.101083!16s%2Fg%2F11v0771_j2" target="_blank" rel="noopener"
-    style="display:inline-flex;align-items:center;gap:.65rem;background:#fff;color:var(--navy);padding:.9rem 2rem;border-radius:var(--r);font-weight:800;font-size:1rem;border:2px solid #e0e8f0;box-shadow:var(--sh);text-decoration:none;transition:transform .15s,box-shadow .2s"
-    onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 28px rgba(0,0,0,.16)'"
-    onmouseout="this.style.transform='';this.style.boxShadow='var(--sh)'">
-    <svg width="22" height="22" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c- href="https://www.google.com/maps/search/Summit+Pressure+Washing+Cedar+City+UT" target="_blank" rel="noopener".22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-    Rate Us on Google
-  </a>
-  <p style="font-size:.8rem;color:var(--gray);margin-top:1rem">We read every review. Thank you! 🙏</p>
-</section>
-
-<!-- ── Gallery ── -->
-<section class="gallery-section" id="gallery">
-  <div class="sec-tag">Our Work</div>
-  <h2 class="sec-title">Recent Projects</h2>
-  <div class="gallery-grid">
-    <a href="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80" target="_blank">
-      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80" alt="Stamped concrete driveway cleaning" loading="lazy" />
-    </a>
-    <a href="https://images.unsplash.com/photo-1527515637462-cff94aca208b?w=900&q=80" target="_blank">
-      <img src="https://images.unsplash.com/photo-1527515637462-cff94aca208b?w=900&q=80" alt="Log cabin porch after washing" loading="lazy" />
-    </a>
-    <a href="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=900&q=80" target="_blank">
-      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=900&q=80" alt="House siding pressure washing" loading="lazy" />
-    </a>
-    <a href="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&q=80" target="_blank">
-      <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&q=80" alt="Pool deck cleaning — Cedar City UT" loading="lazy" />
-    </a>
-    <a href="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80" target="_blank">
-      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80" alt="House wash job" loading="lazy" />
-    </a>
-    <a href="https://images.unsplash.com/photo-1527515637462-cff94aca208b?w=1200&q=80" target="_blank">
-      <img src="https://images.unsplash.com/photo-1527515637462-cff94aca208b?w=1200&q=80" alt="Pressure washing in action" loading="lazy" />
-    </a>
-    <a href="https://images.unsplash.com/photo-1613323593608-abc90fec84ff?w=900&q=80" target="_blank">
-      <img src="https://images.unsplash.com/photo-1613323593608-abc90fec84ff?w=900&q=80" alt="Deck after BBQ grease removal" loading="lazy" />
-    </a>
-    <a href="https://images.unsplash.com/photo-1580256081112-e4c4d72e3b9e?w=900&q=80" target="_blank">
-      <img src="https://images.unsplash.com/photo-1580256081112-e4c4d72e3b9e?w=900&q=80" alt="Southern Utah home before wash" loading="lazy" />
-    </a>
-  </div>
-</section>
-
-<!-- ── About ── -->
-<section class="about-section" id="about">
-  <div class="about-inner">
-    <div class="about-photo reveal">
-      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80" alt="Summit Pressure Washing at work" />
-    </div>
-    <div>
-      <div class="sec-tag">Why Choose Us</div>
-      <h2 class="sec-title">Cedar City's Most Trusted Pressure Washing</h2>
-      <p class="sec-sub" style="margin-bottom:1.8rem">Local, professional, and available whenever you need us. We take pride in every job — big or small.</p>
-      <div class="about-items reveal" style="transition-delay:.1s">
-        <div class="about-item">
-          <div class="about-ic">🏆</div>
-          <div>
-            <h4>5-Star Rated</h4>
-            <p>17 Google reviews and a perfect 5.0 rating. We don't leave until you're satisfied.</p>
+  <section class="ba-section" id="before-after">
+    <span class="sec-tag">Proof of Work</span>
+    <h2 class="sec-title">Before &amp; After</h2>
+    <p class="sec-sub">Drag the slider to see the transformation.</p>
+    <div class="ba-pairs">
+      <div class="ba-wrap">
+        <span class="ba-lbl">Driveway Cleaning</span>
+        <div class="ba-container" id="ba1">
+          <img class="ba-img" src="https://images.unsplash.com/photo-1580256081112-e4c4d72e3b9e?w=1200&q=90" alt="Before — stained driveway" />
+          <div class="ba-after-wrap" id="ba1-after">
+            <img class="ba-after-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=90" alt="After — clean driveway" />
           </div>
-        </div>
-        <div class="about-item">
-          <div class="about-ic">🕐</div>
-          <div>
-            <h4>Open 24 Hours</h4>
-            <p>Need it done early, late, or on the weekend? We're available around the clock.</p>
+          <div class="ba-divider" id="ba1-div"></div>
+          <div class="ba-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5"><polyline points="8 4 2 12 8 20"/><polyline points="16 4 22 12 16 20"/></svg>
           </div>
-        </div>
-        <div class="about-item">
-          <div class="about-ic">📍</div>
-          <div>
-            <h4>Locally Owned</h4>
-            <p>Proudly rooted in Cedar City, southern Utah. When you hire Summit, you support a local business.</p>
+          <div class="ba-labels">
+            <span class="ba-tag">Before</span>
+            <span class="ba-tag">After</span>
           </div>
+          <input type="range" class="ba-range" id="ba1-range" min="0" max="100" value="50" aria-label="Comparison slider" />
         </div>
-        <div class="about-item">
-          <div class="about-ic">📞</div>
-          <div>
-            <h4>Easy to Reach</h4>
-            <p>Call or text us directly. We respond fast and get you on the schedule quickly.</p>
+      </div>
+      <div class="ba-wrap">
+        <span class="ba-lbl">House Exterior Wash</span>
+        <div class="ba-container" id="ba2">
+          <img class="ba-img" src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1200&q=90" alt="Before — dirty house exterior" />
+          <div class="ba-after-wrap" id="ba2-after">
+            <img class="ba-after-img" src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&q=90" alt="After — clean house exterior" />
+          </div>
+          <div class="ba-divider" id="ba2-div"></div>
+          <div class="ba-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5"><polyline points="8 4 2 12 8 20"/><polyline points="16 4 22 12 16 20"/></svg>
+          </div>
+          <div class="ba-labels">
+            <span class="ba-tag">Before</span>
+            <span class="ba-tag">After</span>
+          </div>
+          <input type="range" class="ba-range" id="ba2-range" min="0" max="100" value="50" aria-label="Comparison slider" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section" id="gallery">
+    <span class="sec-tag">Our Work</span>
+    <h2 class="sec-title">Photo Gallery</h2>
+    <div class="gallery-grid">
+      <a href="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=2400&q=90" target="_blank"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=85" alt="Pressure washing results 1" loading="lazy" /></a>
+      <a href="https://images.unsplash.com/photo-1527515637462-cff94aca208b?w=2400&q=90" target="_blank"><img src="https://images.unsplash.com/photo-1527515637462-cff94aca208b?w=900&q=85" alt="Pressure washing results 2" loading="lazy" /></a>
+      <a href="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=2400&q=90" target="_blank"><img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=900&q=85" alt="Pressure washing results 3" loading="lazy" /></a>
+      <a href="https://images.unsplash.com/photo-1613323593608-abc90fec84ff?w=2400&q=90" target="_blank"><img src="https://images.unsplash.com/photo-1613323593608-abc90fec84ff?w=900&q=85" alt="Clean exterior" loading="lazy" /></a>
+      <a href="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=2400&q=90" target="_blank"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&q=85" alt="Kitchen cleaning" loading="lazy" /></a>
+      <a href="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=2400&q=90" target="_blank"><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&q=85" alt="Clean house" loading="lazy" /></a>
+      <a href="https://images.unsplash.com/photo-1580256081112-e4c4d72e3b9e?w=2400&q=90" target="_blank"><img src="https://images.unsplash.com/photo-1580256081112-e4c4d72e3b9e?w=900&q=85" alt="Driveway cleaning" loading="lazy" /></a>
+      <a href="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=2400&q=90" target="_blank"><img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=900&q=85" alt="House exterior" loading="lazy" /></a>
+      <a href="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=2400&q=90" target="_blank"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=900&q=85" alt="Cleaning service" loading="lazy" /></a>
+    </div>
+  </section>
+
+  <div class="book-banner">
+    <h2>Ready to Get Started?</h2>
+    <p>Book your cleaning online in minutes — pick your date and we'll handle the rest.</p>
+    <a href="https://squareup.com/appointments/book/summit-pressure-washing" target="_blank" rel="noopener" class="btn-book-big">
+      📅 Book Your Appointment
+    </a>
+  </div>
+
+  <section class="about-section" id="about">
+    <div class="about-inner">
+      <div class="about-photo">
+        <img src="https://images.unsplash.com/photo-1613323593608-abc90fec84ff?w=800&q=90" alt="Summit Pressure Washing team" loading="lazy" />
+      </div>
+      <div>
+        <span class="sec-tag">About Us</span>
+        <h2 class="sec-title">Cedar City's Trusted Pressure Washing Pros</h2>
+        <p class="sec-sub">We're locals who care about quality. Every job is done right — or we come back and do it again.</p>
+        <div class="about-items">
+          <div class="about-item">
+            <div class="about-ic">⭐</div>
+            <div>
+              <h4>5-Star Rated</h4>
+              <p>17 five-star Google reviews and counting. Our reputation is built job by job.</p>
+            </div>
+          </div>
+          <div class="about-item">
+            <div class="about-ic">🕐</div>
+            <div>
+              <h4>Open 24 / 7</h4>
+              <p>We work around your schedule — evenings, weekends, and holidays.</p>
+            </div>
+          </div>
+          <div class="about-item">
+            <div class="about-ic">💧</div>
+            <div>
+              <h4>Eco-Friendly Products</h4>
+              <p>Biodegradable detergents that are safe for your plants, pets, and driveway.</p>
+            </div>
+          </div>
+          <div class="about-item">
+            <div class="about-ic">🛡️</div>
+            <div>
+              <h4>Fully Insured</h4>
+              <p>Licensed and insured so you never have to worry about a thing.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ── Reviews ── -->
-<section class="reviews-section" id="reviews">
-  <div style="text-align:center">
-    <div class="sec-tag">What Customers Say</div>
-    <h2 class="sec-title" style="margin:0 auto .65rem">5-Star Reviews</h2>
+  <section class="reviews-section" id="reviews">
+    <span class="sec-tag">Customer Reviews</span>
+    <h2 class="sec-title">What Our Clients Say</h2>
     <div class="google-badge">
-      <span class="stars">⭐⭐⭐⭐⭐</span>
-      <strong style="color:var(--navy)">5.0</strong> on Google &nbsp;·&nbsp; 17 reviews
+      <span class="stars">★★★★★</span>
+      <span><strong>5.0</strong> on Google &nbsp;·&nbsp; 17 reviews</span>
     </div>
-  </div>
-  <div class="reviews-grid">
-    <div class="review-card reveal">
-      <div class="review-stars">⭐⭐⭐⭐⭐</div>
-      <p class="review-text">"Summit did an incredible job on our driveway and back patio. On time, professional, and the results were beyond what I expected. Concrete looks brand new. Highly recommend!"</p>
-      <div class="review-author">
-        <div class="review-av">TH</div>
-        <div><div class="review-name">Tyler H.</div><div class="review-date">Google Review</div></div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Summit did an incredible job on my driveway. It looks brand new — I couldn't believe the difference. Will absolutely call them again."</p>
+        <div class="review-author">
+          <div class="review-av">T</div>
+          <div>
+            <div class="review-name">Tyler M.</div>
+            <div class="review-date">Cedar City, UT</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Super professional and on time. My house siding looks amazing — all the green algae is completely gone. Highly recommend!"</p>
+        <div class="review-author">
+          <div class="review-av">S</div>
+          <div>
+            <div class="review-name">Sarah K.</div>
+            <div class="review-date">Cedar City, UT</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Best pressure washing in Cedar City, no question. Fair price, fast work, great communication. 10/10."</p>
+        <div class="review-author">
+          <div class="review-av">R</div>
+          <div>
+            <div class="review-name">Randy B.</div>
+            <div class="review-date">Cedar City, UT</div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="review-card reveal" style="transition-delay:.1s">
-      <div class="review-stars">⭐⭐⭐⭐⭐</div>
-      <p class="review-text">"Best pressure washing service in Cedar City. Super affordable, fast, and my house looks like it was just painted. Very friendly and made sure I was happy before they left."</p>
-      <div class="review-author">
-        <div class="review-av">SR</div>
-        <div><div class="review-name">Sarah R.</div><div class="review-date">Google Review</div></div>
+    <div style="text-align:center;margin-top:2rem">
+      <a href="https://www.google.com/search?q=Summit+Pressure+Washing+Cedar+City+UT+reviews" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.55rem;background:#fff;color:#0b1d2e;padding:.72rem 1.6rem;border-radius:8px;font-weight:700;font-size:.88rem;box-shadow:0 2px 14px rgba(0,0,0,.1);transition:box-shadow .2s">⭐ Leave Us a Review on Google</a>
+    </div>
+  </section>
+
+  <section class="cta-section" id="contact">
+    <div style="position:relative;z-index:2">
+      <span class="sec-tag">Get a Free Quote</span>
+      <h2 class="sec-title">Ready for a Spotless Property?</h2>
+      <p>Call or text us — we'll give you a free estimate within the hour.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a href="tel:4352788851" class="cta-phone">📞 (435) 278-8851</a>
+        <a href="https://squareup.com/appointments/book/summit-pressure-washing" target="_blank" rel="noopener" class="btn-book-big" style="margin-top:0">📅 Book Online</a>
       </div>
     </div>
-    <div class="review-card reveal" style="transition-delay:.2s">
-      <div class="review-stars">⭐⭐⭐⭐⭐</div>
-      <p class="review-text">"Called late in the evening and they were out the next morning. Deck and fence turned out amazing. Will absolutely be using Summit again — great local business."</p>
-      <div class="review-author">
-        <div class="review-av">MK</div>
-        <div><div class="review-name">Mike K.</div><div class="review-date">Google Review</div></div>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=88&q=80" alt="Summit" />
+          <div class="footer-logo-name">Summit Pressure Washing</div>
+        </div>
+        <p class="footer-desc">Cedar City's trusted pressure washing service. 5-star rated, open 24/7, satisfaction guaranteed.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">House Washing</a></li>
+          <li><a href="#services">Driveway Cleaning</a></li>
+          <li><a href="#services">Roof Cleaning</a></li>
+          <li><a href="#services">Deck & Patio</a></li>
+          <li><a href="#services">Commercial</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:4352788851">📞 (435) 278-8851</a></li>
+          <li><a href="https://squareup.com/appointments/book/summit-pressure-washing" target="_blank">📅 Book Online</a></li>
+          <li><a href="#reviews">⭐ Reviews</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ── CTA ── -->
-<section class="cta-section">
-  <div style="position:relative;z-index:1;max-width:600px;margin:0 auto">
-    <div class="sec-tag">Get Started Today</div>
-    <h2 class="sec-title">Ready for a Fresh Start?</h2>
-    <p>Give us a call — we're quick to respond and available 24 hours a day to get your property looking its best.</p>
-    <a href="tel:+14352788851" class="cta-phone">📞 (435) 278-8851</a>
-  </div>
-</section>
-
-<!-- ── Footer ── -->
-<footer>
-  <div class="footer-top">
-    <div>
-      <div class="footer-logo">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='8' fill='%231d4ed8'/%3E%3Cpolygon points='8,40 24,12 40,40' fill='white'/%3E%3Cpolygon points='16,40 29,24 40,40' fill='%2393c5fd'/%3E%3C/svg%3E" alt="Summit Pressure Washing" />
-        <div class="footer-logo-name">Summit Pressure Washing</div>
-      </div>
-      <p class="footer-desc">Professional pressure washing in Cedar City, UT. 5-star rated, locally owned, and open 24 hours.</p>
+    <div class="footer-bot">
+      <span>© 2025 Summit Pressure Washing — Cedar City, UT</span>
+      <span>Site by <a href="#">GC Web Design</a></span>
     </div>
-    <div class="footer-col">
-      <h4>Services</h4>
-      <ul>
-        <li><a href="#services">Pressure Washing</a></li>
-        <li><a href="#services">Soft Washing</a></li>
-        <li><a href="#services">House Washing</a></li>
-        <li><a href="#services">Driveway &amp; Concrete</a></li>
-        <li><a href="#services">Deck &amp; Fence</a></li>
-        <li><a href="#services">Commercial</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <ul>
-        <li><a href="tel:+14352788851">(435) 278-8851</a></li>
-        <li><a href="mailto:ross@summitpressurewashing.com">ross@summitpressurewashing.com</a></li>
-        <li><a href="https://www.facebook.com/summitpressurewashing1/" target="_blank" rel="noopener">Facebook</a></li>
-        <li><span style="color:rgba(255,255,255,.35)">Cedar City, UT</span></li>
-        <li><span style="color:rgba(255,255,255,.35)">Open 24 Hours</span></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bot">
-    <span>© 2026 Summit Pressure Washing. All rights reserved.</span>
-    <span>Built by <a href="https://www.jjstudiowd.com/" target="_blank" rel="noopener">Jake Jones</a></span>
-  </div>
-</footer>
+  </footer>
 
-<script>
-  // Hamburger
-  document.getElementById('hamburger').addEventListener('click',()=>{
-    document.getElementById('nav-links').classList.toggle('open');
-  });
-  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{
-    document.getElementById('nav-links').classList.remove('open');
-  }));
-
-  // Nav shrink on scroll
-  window.addEventListener('scroll',()=>{
-    document.getElementById('nav').style.padding=window.scrollY>50?'.45rem 5%':'.65rem 5%';
-  });
-
-  // Before/After Slider
-  (function(){
-    const range = document.getElementById('ba1-range');
-    const container = document.getElementById('ba1');
-    if (!range || !container) return;
-    const after = document.getElementById('ba1-after');
-    const div   = document.getElementById('ba1-div');
-    const container = document.getElementById('ba1');
-    function slide(v){
-      after.style.clipPath=`inset(0 ${100-v}% 0 0)`;
-      div.style.left=v+'%';
+  <script>
+    function initSlider(cId, aId, dId, rId) {
+      var c = document.getElementById(cId);
+      var a = document.getElementById(aId);
+      var d = document.getElementById(dId);
+      var r = document.getElementById(rId);
+      if (!c || !a || !d || !r) return;
+      function slide(v) { a.style.width = v + '%'; d.style.left = v + '%'; }
+      r.addEventListener('input', function() { slide(r.value); });
+      c.addEventListener('touchmove', function(e) {
+        e.preventDefault();
+        var rect = c.getBoundingClientRect();
+        var pct = Math.max(0, Math.min(100, (e.touches[0].clientX - rect.left) / rect.width * 100));
+        r.value = pct; slide(pct);
+      }, { passive: false });
+      slide(50);
     }
-    range.addEventListener('input',()=>slide(range.value));
-    container.addEventListener('touchmove',e=>{
-      e.preventDefault();
-      const r=container.getBoundingClientRect();
-      const pct=Math.max(0,Math.min(100,(e.touches[0].clientX-r.left)/r.width*100));
-      range.value=pct; slide(pct);
-    },{passive:false});
-    slide(50);
-  })();
-
-  // Scroll Reveal
-  const obs=new IntersectionObserver(entries=>{
-    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
-  },{threshold:0.1});
-  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-
-  // Intro — CSS handles the fade, JS just removes from DOM after it's gone
-  setTimeout(function(){
-    var intro=document.getElementById('intro');
-    if(intro) intro.remove();
-  },3200);
-</script>
+    initSlider('ba1','ba1-after','ba1-div','ba1-range');
+    initSlider('ba2','ba2-after','ba2-div','ba2-range');
+  </script>
 </body>
 </html>
