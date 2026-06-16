@@ -91,6 +91,8 @@
     .ba-labels{position:absolute;inset:0;pointer-events:none;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;padding:.9rem}
     .ba-tag{background:rgba(11,29,46,.82);color:#fff;font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .75rem;border-radius:6px;backdrop-filter:blur(4px)}
     .ba-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:5;margin:0}
+    .ba-split{position:absolute;inset:0;background-size:200% 100%;background-repeat:no-repeat}
+    .ba-split-after{clip-path:inset(0 50% 0 0)}
     .services-section{background:var(--bone)}
     .svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.2rem}
     .svc-card{background:#fff;border-radius:var(--r);padding:1.5rem;box-shadow:var(--sh);display:flex;flex-direction:column;gap:.45rem;animation:fadeUp .55s cubic-bezier(.16,1,.3,1) both}
@@ -257,6 +259,38 @@
             <span class="ba-tag">After</span>
           </div>
           <input type="range" class="ba-range" id="ba2-range" min="0" max="100" value="50" aria-label="Comparison slider" />
+        </div>
+      </div>
+      <div class="ba-wrap">
+        <span class="ba-lbl">Deck Stairs — Real Job</span>
+        <div class="ba-container" id="ba3">
+          <div class="ba-img ba-split" style="background-image:url('assets/pc-deck-stairs.jpg');background-position:right center"></div>
+          <div class="ba-img ba-split-after" id="ba3-after" style="background-image:url('assets/pc-deck-stairs.jpg');background-position:left center"></div>
+          <div class="ba-divider" id="ba3-div"></div>
+          <div class="ba-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5"><polyline points="8 4 2 12 8 20"/><polyline points="16 4 22 12 16 20"/></svg>
+          </div>
+          <div class="ba-labels">
+            <span class="ba-tag">Before</span>
+            <span class="ba-tag">After</span>
+          </div>
+          <input type="range" class="ba-range" id="ba3-range" min="0" max="100" value="50" aria-label="Comparison slider" />
+        </div>
+      </div>
+      <div class="ba-wrap">
+        <span class="ba-lbl">Kitchen Tile — Real Job</span>
+        <div class="ba-container" id="ba4">
+          <div class="ba-img ba-split" style="background-image:url('assets/pc-kitchen-tile.jpg');background-position:left center"></div>
+          <div class="ba-img ba-split-after" id="ba4-after" style="background-image:url('assets/pc-kitchen-tile.jpg');background-position:right center"></div>
+          <div class="ba-divider" id="ba4-div"></div>
+          <div class="ba-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5"><polyline points="8 4 2 12 8 20"/><polyline points="16 4 22 12 16 20"/></svg>
+          </div>
+          <div class="ba-labels">
+            <span class="ba-tag">Before</span>
+            <span class="ba-tag">After</span>
+          </div>
+          <input type="range" class="ba-range" id="ba4-range" min="0" max="100" value="50" aria-label="Comparison slider" />
         </div>
       </div>
     </div>
@@ -431,6 +465,25 @@
     }
     initSlider('ba1','ba1-after','ba1-div','ba1-range');
     initSlider('ba2','ba2-after','ba2-div','ba2-range');
+
+    function initSplitSlider(cId, aId, dId, rId) {
+      var c = document.getElementById(cId);
+      var a = document.getElementById(aId);
+      var d = document.getElementById(dId);
+      var r = document.getElementById(rId);
+      if (!c || !a || !d || !r) return;
+      function slide(v) { a.style.clipPath = 'inset(0 ' + (100 - v) + '% 0 0)'; d.style.left = v + '%'; }
+      r.addEventListener('input', function() { slide(r.value); });
+      c.addEventListener('touchmove', function(e) {
+        e.preventDefault();
+        var rect = c.getBoundingClientRect();
+        var pct = Math.max(0, Math.min(100, (e.touches[0].clientX - rect.left) / rect.width * 100));
+        r.value = pct; slide(pct);
+      }, { passive: false });
+      slide(50);
+    }
+    initSplitSlider('ba3','ba3-after','ba3-div','ba3-range');
+    initSplitSlider('ba4','ba4-after','ba4-div','ba4-range');
   </script>
 </body>
 </html>
