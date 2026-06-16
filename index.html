@@ -226,12 +226,10 @@
     <p class="sec-sub">Drag the slider to see the real results — these are our actual jobs.</p>
     <div class="ba-pairs">
       <div class="ba-wrap">
-        <span class="ba-lbl">Concrete &amp; Driveway</span>
+        <span class="ba-lbl">Deck Stairs</span>
         <div class="ba-container" id="ba1">
-          <img class="ba-img" src="https://images.pexels.com/photos/9127236/pexels-photo-9127236.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Before — algae-covered concrete" />
-          <div class="ba-after-wrap" id="ba1-after">
-            <img class="ba-after-img" src="https://images.pexels.com/photos/3935333/pexels-photo-3935333.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="After — clean property" />
-          </div>
+          <div class="ba-img ba-split" style="background-image:url('assets/pc-deck-stairs.jpg');background-position:right center"></div>
+          <div class="ba-img ba-split-after" id="ba1-after" style="background-image:url('assets/pc-deck-stairs.jpg');background-position:left center"></div>
           <div class="ba-divider" id="ba1-div"></div>
           <div class="ba-btn">
             <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5"><polyline points="8 4 2 12 8 20"/><polyline points="16 4 22 12 16 20"/></svg>
@@ -244,12 +242,10 @@
         </div>
       </div>
       <div class="ba-wrap">
-        <span class="ba-lbl">Deck Cleaning — Real Job</span>
+        <span class="ba-lbl">Kitchen Tile</span>
         <div class="ba-container" id="ba2">
-          <img class="ba-img" src="assets/before-deck.jpg" alt="Before — deck with BBQ grease and grime" />
-          <div class="ba-after-wrap" id="ba2-after">
-            <img class="ba-after-img" src="assets/after-deck.jpg" alt="After — deck cleaned, Cedar City UT" />
-          </div>
+          <div class="ba-img ba-split" style="background-image:url('assets/pc-kitchen-tile.jpg');background-position:left center"></div>
+          <div class="ba-img ba-split-after" id="ba2-after" style="background-image:url('assets/pc-kitchen-tile.jpg');background-position:right center"></div>
           <div class="ba-divider" id="ba2-div"></div>
           <div class="ba-btn">
             <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5"><polyline points="8 4 2 12 8 20"/><polyline points="16 4 22 12 16 20"/></svg>
@@ -259,38 +255,6 @@
             <span class="ba-tag">After</span>
           </div>
           <input type="range" class="ba-range" id="ba2-range" min="0" max="100" value="50" aria-label="Comparison slider" />
-        </div>
-      </div>
-      <div class="ba-wrap">
-        <span class="ba-lbl">Deck Stairs — Real Job</span>
-        <div class="ba-container" id="ba3">
-          <div class="ba-img ba-split" style="background-image:url('assets/pc-deck-stairs.jpg');background-position:right center"></div>
-          <div class="ba-img ba-split-after" id="ba3-after" style="background-image:url('assets/pc-deck-stairs.jpg');background-position:left center"></div>
-          <div class="ba-divider" id="ba3-div"></div>
-          <div class="ba-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5"><polyline points="8 4 2 12 8 20"/><polyline points="16 4 22 12 16 20"/></svg>
-          </div>
-          <div class="ba-labels">
-            <span class="ba-tag">Before</span>
-            <span class="ba-tag">After</span>
-          </div>
-          <input type="range" class="ba-range" id="ba3-range" min="0" max="100" value="50" aria-label="Comparison slider" />
-        </div>
-      </div>
-      <div class="ba-wrap">
-        <span class="ba-lbl">Kitchen Tile — Real Job</span>
-        <div class="ba-container" id="ba4">
-          <div class="ba-img ba-split" style="background-image:url('assets/pc-kitchen-tile.jpg');background-position:left center"></div>
-          <div class="ba-img ba-split-after" id="ba4-after" style="background-image:url('assets/pc-kitchen-tile.jpg');background-position:right center"></div>
-          <div class="ba-divider" id="ba4-div"></div>
-          <div class="ba-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5"><polyline points="8 4 2 12 8 20"/><polyline points="16 4 22 12 16 20"/></svg>
-          </div>
-          <div class="ba-labels">
-            <span class="ba-tag">Before</span>
-            <span class="ba-tag">After</span>
-          </div>
-          <input type="range" class="ba-range" id="ba4-range" min="0" max="100" value="50" aria-label="Comparison slider" />
         </div>
       </div>
     </div>
@@ -447,25 +411,6 @@
   </footer>
 
   <script>
-    function initSlider(cId, aId, dId, rId) {
-      var c = document.getElementById(cId);
-      var a = document.getElementById(aId);
-      var d = document.getElementById(dId);
-      var r = document.getElementById(rId);
-      if (!c || !a || !d || !r) return;
-      function slide(v) { a.style.width = v + '%'; d.style.left = v + '%'; }
-      r.addEventListener('input', function() { slide(r.value); });
-      c.addEventListener('touchmove', function(e) {
-        e.preventDefault();
-        var rect = c.getBoundingClientRect();
-        var pct = Math.max(0, Math.min(100, (e.touches[0].clientX - rect.left) / rect.width * 100));
-        r.value = pct; slide(pct);
-      }, { passive: false });
-      slide(50);
-    }
-    initSlider('ba1','ba1-after','ba1-div','ba1-range');
-    initSlider('ba2','ba2-after','ba2-div','ba2-range');
-
     function initSplitSlider(cId, aId, dId, rId) {
       var c = document.getElementById(cId);
       var a = document.getElementById(aId);
@@ -482,8 +427,8 @@
       }, { passive: false });
       slide(50);
     }
-    initSplitSlider('ba3','ba3-after','ba3-div','ba3-range');
-    initSplitSlider('ba4','ba4-after','ba4-div','ba4-range');
+    initSplitSlider('ba1','ba1-after','ba1-div','ba1-range');
+    initSplitSlider('ba2','ba2-after','ba2-div','ba2-range');
   </script>
 </body>
 </html>
