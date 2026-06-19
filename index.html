@@ -43,17 +43,17 @@
     .nav-book:hover{background:rgba(255,255,255,.22)!important}
     .hamburger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:4px}
     .hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:.3s}
-    .hero{position:relative;min-height:94vh;display:flex;align-items:center;overflow:hidden}
+    .hero{position:relative;min-height:94vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
     .hero-slides{position:absolute;inset:0;z-index:0}
     .hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:heroSlide 25s infinite}
-    .hero-slide::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,rgba(11,29,46,.88) 35%,rgba(11,29,46,.42) 100%)}
-    .hero-slide:nth-child(1){background-image:url('assets/cover.jpg');animation-delay:0s}
-    .hero-slide:nth-child(2){background-image:url('assets/gm_1.jpg');animation-delay:5s}
-    .hero-slide:nth-child(3){background-image:url('assets/gm_2.jpg');animation-delay:10s}
-    .hero-slide:nth-child(4){background-image:url('assets/gm_3.jpg');animation-delay:15s}
-    .hero-slide:nth-child(5){background-image:url('assets/hero.jpg');animation-delay:20s}
+    .hero-slide::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,rgba(11,29,46,.55) 25%,rgba(11,29,46,.2) 100%)}
+    .hero-slide:nth-child(1){background-image:url('assets/new_4.jpg');animation-delay:0s}
+    .hero-slide:nth-child(2){background-image:url('assets/new_5.jpg');animation-delay:5s}
+    .hero-slide:nth-child(3){background-image:url('assets/new_19.jpg');animation-delay:10s}
+    .hero-slide:nth-child(4){background-image:url('assets/new_22.jpg');animation-delay:15s}
+    .hero-slide:nth-child(5){background-image:url('assets/new_7.jpg');animation-delay:20s}
     @keyframes heroSlide{0%{opacity:0}5%{opacity:1}20%{opacity:1}25%{opacity:0}100%{opacity:0}}
-    .hero-inner{position:relative;z-index:2;padding:0 5%;max-width:720px}
+    .hero-inner{position:relative;z-index:2;padding:0 5%;max-width:720px;width:100%;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
     .hero-badge{display:inline-flex;align-items:center;gap:.45rem;background:rgba(14,165,233,.18);border:1px solid rgba(56,189,248,.3);color:var(--cyan);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.35rem .85rem;border-radius:999px;margin-bottom:1.1rem;backdrop-filter:blur(6px)}
     .hero h1{font-size:clamp(2.6rem,5.8vw,4.2rem);color:#fff;font-weight:900;line-height:1.06;margin-bottom:.9rem}
     .hero h1 em{color:var(--cyan);font-style:normal}
@@ -83,16 +83,14 @@
     .ba-wrap{display:flex;flex-direction:column;gap:.6rem}
     .ba-lbl{font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:.3rem;display:block}
     .ba-container{position:relative;width:100%;aspect-ratio:4/3;border-radius:14px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,.45);cursor:ew-resize;user-select:none}
-    .ba-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-    .ba-after-wrap{position:absolute;top:0;left:0;bottom:0;overflow:hidden;width:50%}
-    .ba-after-img{position:absolute;top:0;left:0;width:100vw;max-width:none;height:100%;object-fit:cover;object-position:left top}
-    .ba-divider{position:absolute;top:0;bottom:0;left:50%;transform:translateX(-50%);width:3px;background:#fff;z-index:3;pointer-events:none;box-shadow:0 0 10px rgba(0,0,0,.4)}
-    .ba-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;background:#fff;border-radius:50%;box-shadow:0 2px 16px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:4}
-    .ba-labels{position:absolute;inset:0;pointer-events:none;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;padding:.9rem}
-    .ba-tag{background:rgba(11,29,46,.82);color:#fff;font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .75rem;border-radius:6px;backdrop-filter:blur(4px)}
+    .ba-img{position:absolute;top:0;left:-100%;width:200%;height:100%;max-width:none;object-fit:cover}
+    .ba-after-wrap{position:absolute;inset:0;overflow:hidden;clip-path:inset(0 50% 0 0)}
+    .ba-after-img{position:absolute;top:0;left:0;width:200%;height:100%;max-width:none;object-fit:cover}
+    .ba-divider{position:absolute;top:0;bottom:0;left:50%;transform:translateX(-50%);width:2px;background:#fff;z-index:3;pointer-events:none;box-shadow:0 0 8px rgba(0,0,0,.5)}
+    .ba-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;background:rgba(255,255,255,.95);border-radius:50%;box-shadow:0 2px 12px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:4;transition:none}
+    .ba-labels{display:none}
+    .ba-tag{display:none}
     .ba-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:5;margin:0}
-    .ba-split{position:absolute;inset:0;background-size:200% 100%;background-repeat:no-repeat}
-    .ba-split-after{clip-path:inset(0 50% 0 0)}
     .services-section{background:var(--bone)}
     .svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.2rem}
     .svc-card{background:#fff;border-radius:var(--r);padding:1.5rem;box-shadow:var(--sh);display:flex;flex-direction:column;gap:.45rem;animation:fadeUp .55s cubic-bezier(.16,1,.3,1) both}
@@ -152,7 +150,7 @@
     .footer-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.65rem;font-size:.75rem}
     .footer-bot a{color:var(--blue)}
     @media(max-width:800px){.about-inner{grid-template-columns:1fr}.about-photo img{aspect-ratio:16/9}}
-    @media(max-width:620px){.nav-links{display:none}.hamburger{display:flex}.nav-links.open{display:flex;flex-direction:column;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--navy);z-index:998;justify-content:center;align-items:center;font-size:1.2rem;gap:2rem}.trust-sep{display:none}.hero-btns{flex-direction:column;align-items:flex-start}.nav-logo-sub{display:none}}
+    @media(max-width:620px){.nav-links{display:none}.hamburger{display:flex}.nav-links.open{display:flex;flex-direction:column;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--navy);z-index:998;justify-content:center;align-items:center;font-size:1.2rem;gap:2rem}.trust-sep{display:none}.hero-btns{flex-direction:column;align-items:center}.nav-logo-sub{display:none}}
   </style>
 </head>
 <body>
@@ -177,6 +175,7 @@
       <a href="#services">Services</a>
       <a href="#gallery">Gallery</a>
       <a href="#about">About</a>
+      <a href="mailto:ross@summitpressurewashing.com?subject=Free%20Estimate%20Request" class="nav-book">Get a Free Estimate</a>
       <a href="tel:4352788851" class="nav-cta">📞 Call Now</a>
     </div>
     <button class="hamburger" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
@@ -193,11 +192,11 @@
       <div class="hero-slide"></div>
     </div>
     <div class="hero-inner">
-      <div class="hero-badge">⭐ 5.0 Stars &nbsp;·&nbsp; Cedar City's #1 Pressure Washing</div>
-      <h1>Make It <em>Spotless</em><br/>Again.</h1>
-      <p>Professional pressure washing for driveways, roofs, decks, and commercial properties. Fast. Affordable. Guaranteed results.</p>
-      <div class="hero-btns">
+      <h1 style="font-size:clamp(2.8rem,6.5vw,4.8rem);margin-bottom:.3rem">Summit Pressure Washing</h1>
+      <p style="font-size:clamp(1rem,2.2vw,1.4rem);color:rgba(255,255,255,.7);margin-bottom:2.2rem;letter-spacing:.08em;text-transform:uppercase;font-weight:500">Cedar City, Utah</p>
+      <div class="hero-btns" style="justify-content:center">
         <a href="tel:4352788851" class="btn-primary">📞 (435) 278-8851</a>
+        <a href="mailto:ross@summitpressurewashing.com?subject=Free%20Estimate%20Request" class="btn-book-hero">Get a Free Estimate</a>
         <a href="#before-after" class="btn-ghost">See Our Work ↓</a>
       </div>
     </div>
@@ -223,38 +222,62 @@
   <section class="ba-section" id="before-after">
     <span class="sec-tag">Proof of Work</span>
     <h2 class="sec-title">Before &amp; After</h2>
-    <p class="sec-sub">Drag the slider to see the real results — these are our actual jobs.</p>
+    <p class="sec-sub">Drag the slider to see the difference professional pressure washing makes.</p>
     <div class="ba-pairs">
       <div class="ba-wrap">
-        <span class="ba-lbl">Deck Stairs</span>
+        <span class="ba-lbl">Wood Deck</span>
         <div class="ba-container" id="ba1">
-          <div class="ba-img ba-split" style="background-image:url('assets/pc-deck-stairs.jpg');background-position:right center"></div>
-          <div class="ba-img ba-split-after" id="ba1-after" style="background-image:url('assets/pc-deck-stairs.jpg');background-position:left center"></div>
-          <div class="ba-divider" id="ba1-div"></div>
-          <div class="ba-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5"><polyline points="8 4 2 12 8 20"/><polyline points="16 4 22 12 16 20"/></svg>
+          <img class="ba-img" src="assets/ba1.jpg" alt="After" />
+          <div class="ba-after-wrap" id="ba1-after">
+            <img class="ba-after-img" src="assets/ba1.jpg" alt="Before" />
           </div>
-          <div class="ba-labels">
-            <span class="ba-tag">Before</span>
-            <span class="ba-tag">After</span>
+          <div class="ba-divider" id="ba1-div"></div>
+          <div class="ba-btn" id="ba1-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5"><polyline points="8 4 2 12 8 20"/><polyline points="16 4 22 12 16 20"/></svg>
           </div>
           <input type="range" class="ba-range" id="ba1-range" min="0" max="100" value="50" aria-label="Comparison slider" />
         </div>
       </div>
       <div class="ba-wrap">
-        <span class="ba-lbl">Kitchen Tile</span>
+        <span class="ba-lbl">Brick Walkway</span>
         <div class="ba-container" id="ba2">
-          <div class="ba-img ba-split" style="background-image:url('assets/pc-kitchen-tile.jpg');background-position:left center"></div>
-          <div class="ba-img ba-split-after" id="ba2-after" style="background-image:url('assets/pc-kitchen-tile.jpg');background-position:right center"></div>
-          <div class="ba-divider" id="ba2-div"></div>
-          <div class="ba-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5"><polyline points="8 4 2 12 8 20"/><polyline points="16 4 22 12 16 20"/></svg>
+          <img class="ba-img" src="assets/ba3.jpg" alt="After" />
+          <div class="ba-after-wrap" id="ba2-after">
+            <img class="ba-after-img" src="assets/ba3.jpg" alt="Before" />
           </div>
-          <div class="ba-labels">
-            <span class="ba-tag">Before</span>
-            <span class="ba-tag">After</span>
+          <div class="ba-divider" id="ba2-div"></div>
+          <div class="ba-btn" id="ba2-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5"><polyline points="8 4 2 12 8 20"/><polyline points="16 4 22 12 16 20"/></svg>
           </div>
           <input type="range" class="ba-range" id="ba2-range" min="0" max="100" value="50" aria-label="Comparison slider" />
+        </div>
+      </div>
+      <div class="ba-wrap">
+        <span class="ba-lbl">Brick Steps</span>
+        <div class="ba-container" id="ba3">
+          <img class="ba-img" src="assets/ba2.jpg" alt="After" />
+          <div class="ba-after-wrap" id="ba3-after">
+            <img class="ba-after-img" src="assets/ba2.jpg" alt="Before" />
+          </div>
+          <div class="ba-divider" id="ba3-div"></div>
+          <div class="ba-btn" id="ba3-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5"><polyline points="8 4 2 12 8 20"/><polyline points="16 4 22 12 16 20"/></svg>
+          </div>
+          <input type="range" class="ba-range" id="ba3-range" min="0" max="100" value="50" aria-label="Comparison slider" />
+        </div>
+      </div>
+      <div class="ba-wrap">
+        <span class="ba-lbl">House Exterior</span>
+        <div class="ba-container" id="ba4">
+          <img class="ba-img" src="assets/ba4.jpg" alt="After" />
+          <div class="ba-after-wrap" id="ba4-after">
+            <img class="ba-after-img" src="assets/ba4.jpg" alt="Before" />
+          </div>
+          <div class="ba-divider" id="ba4-div"></div>
+          <div class="ba-btn" id="ba4-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5"><polyline points="8 4 2 12 8 20"/><polyline points="16 4 22 12 16 20"/></svg>
+          </div>
+          <input type="range" class="ba-range" id="ba4-range" min="0" max="100" value="50" aria-label="Comparison slider" />
         </div>
       </div>
     </div>
@@ -277,19 +300,19 @@
         <p>High-pressure concrete cleaning that blasts away oil stains, tire marks, and embedded dirt.</p>
       </div>
       <div class="svc-card">
-        <div class="svc-icon">🏗️</div>
-        <h3>Roof Cleaning</h3>
-        <p>Low-pressure soft wash removes black streaks and extends roof life without risk of damage.</p>
-      </div>
-      <div class="svc-card">
         <div class="svc-icon">🌿</div>
         <h3>Deck & Patio</h3>
         <p>Restore wood and composite decks to like-new condition — ready for staining or just to enjoy.</p>
       </div>
       <div class="svc-card">
         <div class="svc-icon">🏢</div>
-        <h3>Commercial</h3>
-        <p>Storefronts, parking lots, sidewalks — we keep your business looking professional year-round.</p>
+        <h3>Storefronts & Sidewalks</h3>
+        <p>Keep your business looking professional year-round with regular storefront and sidewalk cleaning.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🏗️</div>
+        <h3>Roof Cleaning</h3>
+        <p>Low-pressure soft wash removes black streaks and extends roof life without risk of damage.</p>
       </div>
       <div class="svc-card">
         <div class="svc-icon">🚗</div>
@@ -313,22 +336,18 @@
     <span class="sec-tag">Our Work</span>
     <h2 class="sec-title">Photo Gallery</h2>
     <div class="gallery-grid">
-      <a href="assets/fb_1.jpg" target="_blank"><img src="assets/fb_1.jpg" alt="Pressure washing result" loading="lazy" /></a>
-      <a href="assets/fb_2.jpg" target="_blank"><img src="assets/fb_2.jpg" alt="Pressure washing result" loading="lazy" /></a>
-      <a href="assets/fb_3.jpg" target="_blank"><img src="assets/fb_3.jpg" alt="Pressure washing result" loading="lazy" /></a>
-      <a href="assets/fb_4.jpg" target="_blank"><img src="assets/fb_4.jpg" alt="Pressure washing result" loading="lazy" /></a>
-      <a href="assets/fb_5.jpg" target="_blank"><img src="assets/fb_5.jpg" alt="Pressure washing result" loading="lazy" /></a>
-      <a href="assets/fb_6.jpg" target="_blank"><img src="assets/fb_6.jpg" alt="Pressure washing result" loading="lazy" /></a>
-      <a href="assets/fb_7.jpg" target="_blank"><img src="assets/fb_7.jpg" alt="Pressure washing result" loading="lazy" /></a>
-      <a href="assets/fb_8.jpg" target="_blank"><img src="assets/fb_8.jpg" alt="Pressure washing result" loading="lazy" /></a>
-      <a href="assets/fb_9.jpg" target="_blank"><img src="assets/fb_9.jpg" alt="Pressure washing result" loading="lazy" /></a>
-      <a href="assets/fb_10.jpg" target="_blank"><img src="assets/fb_10.jpg" alt="Pressure washing result" loading="lazy" /></a>
-      <a href="assets/fb_11.jpg" target="_blank"><img src="assets/fb_11.jpg" alt="Pressure washing result" loading="lazy" /></a>
-      <a href="assets/fb_12.jpg" target="_blank"><img src="assets/fb_12.jpg" alt="Pressure washing result" loading="lazy" /></a>
-      <a href="assets/gm_1.jpg" target="_blank"><img src="assets/gm_1.jpg" alt="Pressure washing result" loading="lazy" /></a>
-      <a href="assets/gm_2.jpg" target="_blank"><img src="assets/gm_2.jpg" alt="Pressure washing result" loading="lazy" /></a>
-      <a href="assets/gm_3.jpg" target="_blank"><img src="assets/gm_3.jpg" alt="Pressure washing result" loading="lazy" /></a>
-      <a href="assets/gm_4.jpg" target="_blank"><img src="assets/gm_4.jpg" alt="Pressure washing result" loading="lazy" /></a>
+      <a href="assets/gal1.jpg" target="_blank"><img src="assets/gal1.jpg" alt="Pressure washing house siding — halfway clean" loading="lazy" /></a>
+      <a href="assets/gal6.jpg" target="_blank"><img src="assets/gal6.jpg" alt="Pressure washing concrete — clean strip" loading="lazy" /></a>
+      <a href="assets/gm_2.jpg" target="_blank"><img src="assets/gm_2.jpg" alt="Clean pool deck" loading="lazy" /></a>
+      <a href="assets/gal2.webp" target="_blank"><img src="assets/gal2.webp" alt="Pressure washing deck in action" loading="lazy" /></a>
+      <a href="assets/gal3.jpg" target="_blank"><img src="assets/gal3.jpg" alt="Pressure washing paver driveway" loading="lazy" /></a>
+      <a href="assets/gm_4.jpg" target="_blank"><img src="assets/gm_4.jpg" alt="Clean cabin porch" loading="lazy" /></a>
+      <a href="assets/gal4.webp" target="_blank"><img src="assets/gal4.webp" alt="Pressure washing brick wall" loading="lazy" /></a>
+      <a href="assets/new_4.jpg" target="_blank"><img src="assets/new_4.jpg" alt="Clean driveway result" loading="lazy" /></a>
+      <a href="assets/gal5.webp" target="_blank"><img src="assets/gal5.webp" alt="Pressure washing house exterior" loading="lazy" /></a>
+      <a href="assets/new_22.jpg" target="_blank"><img src="assets/new_22.jpg" alt="Clean driveway with landscaping" loading="lazy" /></a>
+      <a href="assets/action_2.jpg" target="_blank"><img src="assets/action_2.jpg" alt="Clean house with pool" loading="lazy" /></a>
+      <a href="assets/new_5.jpg" target="_blank"><img src="assets/new_5.jpg" alt="Modern home clean driveway" loading="lazy" /></a>
     </div>
   </section>
 
@@ -365,11 +384,12 @@
 
   <section class="cta-section" id="contact">
     <div style="position:relative;z-index:2">
-      <span class="sec-tag">Get a Free Quote</span>
+      <span class="sec-tag">Free Estimates</span>
       <h2 class="sec-title">Ready for a Spotless Property?</h2>
-      <p>Call or text us — we'll give you a free estimate within the hour.</p>
+      <p>Call, text, or email us — we'll get back to you with a free estimate.</p>
       <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
         <a href="tel:4352788851" class="cta-phone">📞 (435) 278-8851</a>
+        <a href="mailto:ross@summitpressurewashing.com?subject=Free%20Estimate%20Request" class="cta-phone" style="background:var(--blue);color:#fff">✉️ Get a Free Estimate</a>
       </div>
     </div>
   </section>
@@ -388,16 +408,16 @@
         <ul>
           <li><a href="#services">House Washing</a></li>
           <li><a href="#services">Driveway Cleaning</a></li>
-          <li><a href="#services">Roof Cleaning</a></li>
           <li><a href="#services">Deck & Patio</a></li>
-          <li><a href="#services">Commercial</a></li>
+          <li><a href="#services">Storefronts & Sidewalks</a></li>
+          <li><a href="#services">Roof Cleaning</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
         <ul>
           <li><a href="tel:4352788851">📞 (435) 278-8851</a></li>
-          <li></li>
+          <li><a href="mailto:ross@summitpressurewashing.com">✉️ ross@summitpressurewashing.com</a></li>
           <li><a href="#before-after">Before & After</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#about">About Us</a></li>
@@ -405,19 +425,24 @@
       </div>
     </div>
     <div class="footer-bot">
-      <span>© 2025 Summit Pressure Washing — Cedar City, UT</span>
+      <span>© 2026 Summit Pressure Washing — Cedar City, UT</span>
       <span>Site by <a href="#">GC Web Design</a></span>
     </div>
   </footer>
 
   <script>
-    function initSplitSlider(cId, aId, dId, rId) {
+    function initSplitSlider(cId, aId, dId, bId, rId) {
       var c = document.getElementById(cId);
       var a = document.getElementById(aId);
       var d = document.getElementById(dId);
+      var b = document.getElementById(bId);
       var r = document.getElementById(rId);
       if (!c || !a || !d || !r) return;
-      function slide(v) { a.style.clipPath = 'inset(0 ' + (100 - v) + '% 0 0)'; d.style.left = v + '%'; }
+      function slide(v) {
+        a.style.clipPath = 'inset(0 ' + (100 - v) + '% 0 0)';
+        d.style.left = v + '%';
+        if (b) b.style.left = v + '%';
+      }
       r.addEventListener('input', function() { slide(r.value); });
       c.addEventListener('touchmove', function(e) {
         e.preventDefault();
@@ -427,8 +452,10 @@
       }, { passive: false });
       slide(50);
     }
-    initSplitSlider('ba1','ba1-after','ba1-div','ba1-range');
-    initSplitSlider('ba2','ba2-after','ba2-div','ba2-range');
+    initSplitSlider('ba1','ba1-after','ba1-div','ba1-btn','ba1-range');
+    initSplitSlider('ba2','ba2-after','ba2-div','ba2-btn','ba2-range');
+    initSplitSlider('ba3','ba3-after','ba3-div','ba3-btn','ba3-range');
+    initSplitSlider('ba4','ba4-after','ba4-div','ba4-btn','ba4-range');
   </script>
 </body>
 </html>
