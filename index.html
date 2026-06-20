@@ -382,15 +382,55 @@
     </div>
   </section>
 
-  <section class="cta-section" id="contact">
-    <div style="position:relative;z-index:2">
-      <span class="sec-tag">Free Estimates</span>
-      <h2 class="sec-title">Ready for a Spotless Property?</h2>
-      <p>Call, text, or email us — we'll get back to you with a free estimate.</p>
-      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-        <a href="tel:4352788851" class="cta-phone">📞 (435) 278-8851</a>
-        <a href="mailto:ross@summitpressurewashing.com?subject=Free%20Estimate%20Request" class="cta-phone" style="background:var(--blue);color:#fff">✉️ Get a Free Estimate</a>
+  <section id="contact" style="background:var(--bone);padding:4.5rem 5%">
+    <div style="max-width:600px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:2rem;">
+        <span class="sec-tag">Free Estimates</span>
+        <h2 class="sec-title">Get a Free Estimate</h2>
+        <p style="font-size:.95rem;color:var(--gray);margin-top:.5rem;">Fill out the form and choose <strong>Text</strong> (fastest) or <strong>Email</strong> — your app opens with Ross's info pre-filled. Just hit send!</p>
       </div>
+      <form style="background:#fff;border-radius:var(--r);padding:2rem;box-shadow:var(--sh);display:flex;flex-direction:column;gap:1.1rem;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;">
+          <div>
+            <label style="display:block;font-size:.72rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.35rem;">Full Name *</label>
+            <input name="name" required placeholder="Your name" style="width:100%;padding:.7rem .9rem;border:1px solid #e2e8f0;border-radius:8px;font-family:inherit;font-size:.9rem;outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='#0ea5e9'" onblur="this.style.borderColor='#e2e8f0'"/>
+          </div>
+          <div>
+            <label style="display:block;font-size:.72rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.35rem;">Phone Number *</label>
+            <input name="phone" type="tel" required placeholder="(555) 555-5555" style="width:100%;padding:.7rem .9rem;border:1px solid #e2e8f0;border-radius:8px;font-family:inherit;font-size:.9rem;outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='#0ea5e9'" onblur="this.style.borderColor='#e2e8f0'"/>
+          </div>
+        </div>
+        <div>
+          <label style="display:block;font-size:.72rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.35rem;">Property Address</label>
+          <input name="address" placeholder="Address for the estimate" style="width:100%;padding:.7rem .9rem;border:1px solid #e2e8f0;border-radius:8px;font-family:inherit;font-size:.9rem;outline:none;transition:border-color .2s;" onfocus="this.style.borderColor='#0ea5e9'" onblur="this.style.borderColor='#e2e8f0'"/>
+        </div>
+        <div>
+          <label style="display:block;font-size:.72rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.35rem;">Service Needed</label>
+          <select name="service" style="width:100%;padding:.7rem .9rem;border:1px solid #e2e8f0;border-radius:8px;font-family:inherit;font-size:.9rem;outline:none;background:#fff;transition:border-color .2s;" onfocus="this.style.borderColor='#0ea5e9'" onblur="this.style.borderColor='#e2e8f0'">
+            <option value="">Select a service...</option>
+            <option value="House Washing">House Washing</option>
+            <option value="Driveway & Concrete">Driveway & Concrete</option>
+            <option value="Deck & Patio">Deck & Patio</option>
+            <option value="Storefronts & Sidewalks">Storefronts & Sidewalks</option>
+            <option value="Roof Cleaning">Roof Cleaning</option>
+            <option value="Fleet Washing">Fleet Washing</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label style="display:block;font-size:.72rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.35rem;">Additional Details</label>
+          <textarea name="details" rows="3" placeholder="Size of property, specific areas, anything else..." style="width:100%;padding:.7rem .9rem;border:1px solid #e2e8f0;border-radius:8px;font-family:inherit;font-size:.9rem;outline:none;resize:vertical;transition:border-color .2s;" onfocus="this.style.borderColor='#0ea5e9'" onblur="this.style.borderColor='#e2e8f0'"></textarea>
+        </div>
+        <div style="display:flex;gap:.7rem;">
+          <button type="button" onclick="var b=this.closest('form').elements;if(!b.name.value||!b.phone.value){alert('Please fill in your name and phone number.');return;}var msg='Hi! I\'d like a free pressure washing estimate.%0A%0AName: '+b.name.value+'%0APhone: '+b.phone.value+'%0AAddress: '+b.address.value+'%0AService: '+b.service.value+'%0ADetails: '+b.details.value;window.location='sms:4352788851?&body='+msg;" style="flex:1;padding:.85rem;background:var(--blue);color:#fff;border:none;border-radius:var(--r);font-family:inherit;font-size:.95rem;font-weight:700;cursor:pointer;transition:background .2s,transform .15s;box-shadow:0 4px 18px rgba(14,165,233,.3);" onmouseover="this.style.background='#0284c7';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#0ea5e9';this.style.transform='none'">
+            💬 Text Quote
+          </button>
+          <button type="button" onclick="var b=this.closest('form').elements;if(!b.name.value||!b.phone.value){alert('Please fill in your name and phone number.');return;}var s='Name: '+b.name.value+'%0APhone: '+b.phone.value+'%0AAddress: '+b.address.value+'%0AService: '+b.service.value+'%0ADetails: '+b.details.value;window.location='mailto:ross@summitpressurewashing.com?subject=Free%20Estimate%20-%20'+encodeURIComponent(b.name.value)+'&body='+s;" style="flex:1;padding:.85rem;background:#fff;color:var(--navy);border:2px solid #e2e8f0;border-radius:var(--r);font-family:inherit;font-size:.95rem;font-weight:700;cursor:pointer;transition:border-color .2s,transform .15s;" onmouseover="this.style.borderColor='#0ea5e9';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e2e8f0';this.style.transform='none'">
+            ✉️ Email Quote
+          </button>
+        </div>
+      </form>
+      <p style="text-align:center;margin-top:1.2rem;font-size:.85rem;color:var(--gray);">Or call directly: <a href="tel:4352788851" style="color:var(--blue);font-weight:700;">(435) 278-8851</a></p>
     </div>
   </section>
 
